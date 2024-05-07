@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.mint-green-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%; /* 1/5 of the screen width */
+  height: 100vh; /* Full height of the screen */
+  background-color: mintcream; /* Mint green color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mint-green-bar h1 {
+  margin-bottom: 1rem;
+}
+
+.mint-green-bar img {
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+}
+
