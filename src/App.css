@@ -43,7 +43,7 @@
   left: 0;
   width: 20%; /* 1/5 of the screen width */
   height: 100vh; /* Full height of the screen */
-  background-color: mintcream; /* Mint green color */
+  background-color: rgb(56, 235, 145); /* Mint green color */
   display: flex;
   flex-direction: column;
   justify-content: center;
