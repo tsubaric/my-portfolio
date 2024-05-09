@@ -8,6 +8,7 @@ function App() {
         <h1>Title</h1>
         <img src={logo} alt="Logo" />
         <div className="social-media-buttons">
+          <h4>Test Subheader</h4>
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
             <img src="facebook-icon.png" alt="Facebook" />
           </a>
@@ -23,10 +24,11 @@ function App() {
           <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
             <img src="github-icon.png" alt="GitHub" />
           </a>
-          {/* <a href="https://www.example.com/" target="_blank" rel="noopener noreferrer">
-            <img src="x-icon.png" alt="X" />
-          </a> */}
         </div>
+        <div className="separator"></div> {/* Faded line separator */}
+        <div className="holder">Holder Value</div> {/* Holder value under the line */}
+        <div className="separator"></div> {/* Another line */}
+        <div className="holder">Another Holder Value</div> {/* Holder value under the second line */}
       </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
