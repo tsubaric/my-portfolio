@@ -31,18 +31,14 @@ function App() {
         <div className="holder">Another Holder Value</div> {/* Holder value under the second line */}
       </div>
       <header className="App-header">
+        <div className="text-section">
+          <h2>Name Title</h2>
+          <h3>Job Title</h3>
+          <p>
+            This is a description. Add more details about the person, their role, and any other relevant information here.
+          </p>
+        </div>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
