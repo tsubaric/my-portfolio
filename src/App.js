@@ -46,7 +46,6 @@ function App() {
         </div>
         <h4>Test Subheader</h4>
         <div className="separator"></div> {/* Faded line separator */}
-
         <div className="holder">
           <IconButton aria-label="about me">
             <PersonIcon />
@@ -71,7 +70,6 @@ function App() {
           </IconButton>
           Contact
         </div>
-
         <div className="separator"></div> {/* Another line */}
         <Button variant="contained" color="primary">Contact Me</Button>
         <div className="dark-mode-switch">
