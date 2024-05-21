@@ -73,6 +73,7 @@ function App() {
         </div>
 
         <div className="separator"></div> {/* Another line */}
+        <Button variant="contained" color="primary">Contact Me</Button>
         <div className="dark-mode-switch">
           <Brightness6SharpIcon fontSize="medium" alt="Dark Mode" />
           <Switch {...label} />
@@ -87,8 +88,8 @@ function App() {
             This is a description. Add more details about the person, their role, and any other relevant information here.
           </p>
           <div className="button-group">
-            <Button variant="contained" color="primary">Button 1</Button>
-            <Button variant="contained" color="secondary">Button 2</Button>
+            <Button variant="contained" color="primary">View Portfolio</Button>
+            <Button variant="contained" color="secondary">View Resume</Button>
           </div>
         </div>
         <img src={logo} className="App-logo" alt="logo" />
