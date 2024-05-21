@@ -24,7 +24,7 @@ body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: center; /* Center content horizontally */
   padding: 20px;
   color: white;
