@@ -71,6 +71,7 @@ body {
   flex-direction: row; /* Align buttons horizontally */
   gap: 10px;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .separator {
@@ -109,4 +110,14 @@ body {
   align-items: center;
   gap: 10px;
   margin-top: 10px;
+}
+
+.holder {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Add margin between each holder */
+}
+
+.holder > span {
+  margin-left: 10px; /* Add space between icon and text */
 }

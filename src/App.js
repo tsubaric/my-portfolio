@@ -27,7 +27,6 @@ function App() {
         <div className="center-container">
           <img src={logo} alt="Logo" />
           <div className="social-media-buttons">
-            <h4>Test Subheader</h4>
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
               <FacebookIcon fontSize="medium" alt="Facebook" />
             </a>
@@ -45,6 +44,7 @@ function App() {
             </a>
           </div>
         </div>
+        <h4>Test Subheader</h4>
         <div className="separator"></div> {/* Faded line separator */}
 
         <div className="holder">
