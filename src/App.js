@@ -87,7 +87,7 @@ function App() {
           </p>
           <div className="button-group">
             <Button variant="contained" color="primary">View Portfolio</Button>
-            <Button variant="contained" color="secondary">View Resume</Button>
+            <Button variant="contained" color="primary">View Resume</Button>
           </div>
         </div>
         <img src={logo} className="App-logo" alt="logo" />
