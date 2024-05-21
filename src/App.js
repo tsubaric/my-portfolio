@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <div className="mint-green-bar">
-        <h1>Title</h1>
+        <h1>Tommy Subaric</h1>
         <div className="center-container">
           <img src={logo} alt="Logo" />
           <div className="social-media-buttons">
@@ -44,8 +44,8 @@ function App() {
             </a>
           </div>
         </div>
-        <h4>Test Subheader</h4>
-        <div className="separator"></div> {/* Faded line separator */}
+        <h4>Hi, my name is Tommy Subaric and I'm a Software Engineer. Welcome to my personal website!</h4>
+        <div className="separator"></div>
         <div className="holder">
           <IconButton aria-label="about me">
             <PersonIcon />
@@ -70,18 +70,18 @@ function App() {
           </IconButton>
           Contact
         </div>
-        <div className="separator"></div> {/* Another line */}
+        <div className="separator"></div>
         <Button variant="contained" color="primary">Contact Me</Button>
         <div className="dark-mode-switch">
           <Brightness6SharpIcon fontSize="medium" alt="Dark Mode" />
           <Switch {...label} />
         </div>
-        <div className="holder">Dark Mode</div> {/* Holder value under the second line */}
+        <div className="holder">Dark Mode</div>
       </div>
       <header className="App-header">
         <div className="text-section">
-          <h2>Name Title</h2>
-          <h3>Job Title</h3>
+          <h2>Tommy Subaric</h2>
+          <h3>Software Engineer</h3>
           <p>
             This is a description. Add more details about the person, their role, and any other relevant information here.
           </p>
