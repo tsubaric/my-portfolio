@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Button from '@mui/material/Button';
 import Switch from '@mui/material/Switch';
+import IconButton from '@mui/material/IconButton';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -11,6 +12,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 import Brightness6SharpIcon from '@mui/icons-material/Brightness6Sharp';
+import PersonIcon from '@mui/icons-material/Person';
+import DescriptionIcon from '@mui/icons-material/Description';
+import WorkIcon from '@mui/icons-material/Work';
+import MailIcon from '@mui/icons-material/Mail';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
@@ -41,7 +46,32 @@ function App() {
           </div>
         </div>
         <div className="separator"></div> {/* Faded line separator */}
-        <div className="holder">Holder Value</div> {/* Holder value under the line */}
+
+        <div className="holder">
+          <IconButton aria-label="about me">
+            <PersonIcon />
+          </IconButton>
+          About Me
+        </div>
+        <div className="holder">
+          <IconButton aria-label="resume">
+            <DescriptionIcon />
+          </IconButton>
+          Resume
+        </div>
+        <div className="holder">
+          <IconButton aria-label="portfolio">
+            <WorkIcon />
+          </IconButton>
+          Portfolio
+        </div>
+        <div className="holder">
+          <IconButton aria-label="contact">
+            <MailIcon />
+          </IconButton>
+          Contact
+        </div>
+
         <div className="separator"></div> {/* Another line */}
         <div className="dark-mode-switch">
           <Brightness6SharpIcon fontSize="medium" alt="Dark Mode" />
