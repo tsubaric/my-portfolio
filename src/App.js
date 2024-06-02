@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+import pfp from './Arthur_PFP.jpeg';
+import portrait from './Arthur Morgan.jpeg';
 import './App.css';
 import Button from '@mui/material/Button';
 import Switch from '@mui/material/Switch';
@@ -25,7 +26,7 @@ function App() {
       <div className="mint-green-bar">
         <h1>Tommy Subaric</h1>
         <div className="center-container">
-          <img src={logo} alt="Logo" />
+          <img src={pfp} alt="Profile Picture" />
           <div className="social-media-buttons">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
               <FacebookIcon fontSize="medium" alt="Facebook" />
@@ -90,7 +91,7 @@ function App() {
             <Button variant="contained" color="primary">View Resume</Button>
           </div>
         </div>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={portrait} className="App-logo" alt="Portrait" />
       </header>
       <h1>Test Test</h1>
     </div>
