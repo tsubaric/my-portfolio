@@ -26,6 +26,7 @@ function App() {
       <div className="mint-green-bar">
         <h1>Tommy Subaric</h1>
         <div className="center-container">
+          {/* eslint-disable-next-line */}
           <img src={pfp} alt="Profile Picture" className="profile-picture" />
           <div className="social-media-buttons">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
