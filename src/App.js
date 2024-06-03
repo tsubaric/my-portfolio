@@ -26,22 +26,22 @@ function App() {
       <div className="mint-green-bar">
         <h1>Tommy Subaric</h1>
         <div className="center-container">
-          <img src={pfp} alt="Profile Picture" />
+          <img src={pfp} alt="Profile Picture" className="profile-picture" />
           <div className="social-media-buttons">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-              <FacebookIcon fontSize="medium" alt="Facebook" />
+              <FacebookIcon fontSize="medium" color="primary" alt="Facebook" />
             </a>
             <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
-              <TwitterIcon fontSize="medium" alt="Twitter" />
+              <TwitterIcon fontSize="medium" color="primary" alt="Twitter" />
             </a>
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-              <InstagramIcon fontSize="medium" alt="Instagram" />
+              <InstagramIcon fontSize="medium" color="primary" alt="Instagram" />
             </a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-              <LinkedInIcon fontSize="medium" alt="LinkedIn" />
+              <LinkedInIcon fontSize="medium" color="primary" alt="LinkedIn" />
             </a>
             <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
-              <GitHubIcon fontSize="medium" alt="GitHub" />
+              <GitHubIcon fontSize="medium" color="primary" alt="GitHub" />
             </a>
           </div>
         </div>
