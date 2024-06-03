@@ -8,7 +8,8 @@ body {
 }
 
 .App-logo {
-  width: 100px; /* Adjust size as needed */
+  width: 400px; /* Adjust size as needed */
+  padding: 20px;
 }
 
 .App-header {
@@ -44,8 +45,8 @@ body {
 }
 
 .mint-green-bar img {
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
   border-radius: 50%; /* Make the profile picture circular */
 }
 
