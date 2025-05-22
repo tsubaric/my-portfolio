@@ -1,26 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import pfp from './Arthur_PFP.jpeg';
 import portrait from './Arthur Morgan.jpeg';
 import './App.css';
 import Button from '@mui/material/Button';
-import Switch from '@mui/material/Switch';
 import IconButton from '@mui/material/IconButton';
 
-import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
 
-import Brightness6SharpIcon from '@mui/icons-material/Brightness6Sharp';
 import PersonIcon from '@mui/icons-material/Person';
 import DescriptionIcon from '@mui/icons-material/Description';
 import WorkIcon from '@mui/icons-material/Work';
-import MailIcon from '@mui/icons-material/Mail';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 function App() {
+  const [showResume, setShowResume] = useState(false);
+
+  const handleResumeClick = (e) => {
+    e.preventDefault();
+    setShowResume(true);
+  };
+
   return (
     <div className="App">
       <div className="mint-green-bar">
@@ -29,15 +30,6 @@ function App() {
           {/* eslint-disable-next-line */}
           <img src={pfp} alt="Profile Picture" className="profile-picture" />
           <div className="social-media-buttons">
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-              <FacebookIcon fontSize="medium" color="primary" alt="Facebook" />
-            </a>
-            <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
-              <TwitterIcon fontSize="medium" color="primary" alt="Twitter" />
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-              <InstagramIcon fontSize="medium" color="primary" alt="Instagram" />
-            </a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
               <LinkedInIcon fontSize="medium" color="primary" alt="LinkedIn" />
             </a>
@@ -66,19 +58,8 @@ function App() {
           </IconButton>
           Portfolio
         </div>
-        <div className="holder">
-          <IconButton aria-label="contact">
-            <MailIcon />
-          </IconButton>
-          Contact
-        </div>
         <div className="separator"></div>
         <Button variant="contained" color="primary">Contact Me</Button>
-        <div className="dark-mode-switch">
-          <Brightness6SharpIcon fontSize="medium" alt="Dark Mode" />
-          <Switch {...label} />
-        </div>
-        <div className="holder">Dark Mode</div>
       </div>
       <header className="App-header">
         <div className="text-section">
@@ -88,13 +69,29 @@ function App() {
             This is a description. Add more details about the person, their role, and any other relevant information here.
           </p>
           <div className="button-group">
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleResumeClick}
+            >
+              View Resume
+            </Button>
             <Button variant="contained" color="primary">View Portfolio</Button>
-            <Button variant="contained" color="primary">View Resume</Button>
           </div>
         </div>
         <img src={portrait} className="App-logo" alt="Portrait" />
       </header>
-      <h1>Test Test</h1>
+      <h1>
+        {showResume ? (
+          <iframe
+            src="/resume.html"
+            title="Resume"
+            style={{ width: '100%', height: '600px', border: 'none' }}
+          />
+        ) : (
+          'Test Test'
+        )}
+      </h1>
     </div>
   );
 }
