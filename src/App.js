@@ -49,10 +49,7 @@ function App() {
             <IconButton aria-label="portfolio" size="small"><WorkIcon /></IconButton>
             <span>Portfolio</span>
           </div>
-          <div onClick={() => scrollToSection(resumeRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
-            <IconButton aria-label="resume" size="small"><DescriptionIcon /></IconButton>
-            <span>Resume</span>
-          </div>
+          {/* Removed Resume Tab */}
           <div onClick={() => scrollToSection(contactRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
             <IconButton aria-label="contact" size="small"><EmailIcon /></IconButton>
             <span>Contact</span>
@@ -133,21 +130,70 @@ function App() {
           />
         </section>
         <hr className="section-divider" />
-        <section ref={resumeRef} className="section-resume" style={{ minHeight: '80vh', paddingBottom: 40 }}>
-          <h2>Resume</h2>
-          <iframe
-            src="/resume.html"
-            title="Resume"
-            style={{ width: '100%', height: '80vh', border: 'none' }}
-          />
-        </section>
-        <hr className="section-divider" />
-        <section ref={contactRef} className="section-contact" style={{ minHeight: '40vh', paddingBottom: 40 }}>
-          <h2>Contact</h2>
-          <p>Email: <a href="mailto:tjsubaric@gmail.com">tjsubaric@gmail.com</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/thomas-subaric/" target="_blank" rel="noopener noreferrer">linkedin.com/in/thomas-subaric</a></p>
-          <p>GitHub: <a href="https://github.com/tsubaric" target="_blank" rel="noopener noreferrer">github.com/tsubaric</a></p>
-        </section>
+        {/* Removed Resume Section */}
+        <footer ref={contactRef} className="section-contact footer-contact" style={{ minHeight: 'unset', padding: '40px 0 20px 0', background: '#2e3a59', color: '#fff' }}>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'stretch',
+            gap: '4rem',
+            maxWidth: 1100,
+            margin: '0 auto',
+            flexWrap: 'wrap'
+          }}>
+            {/* Contact Me Title Column */}
+            <div style={{
+              flex: 1,
+              minWidth: 180,
+              display: 'flex',
+              alignItems: 'center', // Vertically center
+              justifyContent: 'flex-start',
+              height: '100%'
+            }}>
+              <span style={{
+                fontSize: '2.2rem',
+                fontWeight: 700,
+                color: '#fff',
+                letterSpacing: 1
+              }}>Contact Me</span>
+            </div>
+            {/* Social Media Column */}
+            <div style={{ flex: 1, minWidth: 180 }}>
+              <h3 style={{ color: '#fff', marginBottom: 12 }}>Social</h3>
+              <p>
+                <a href="https://www.linkedin.com/in/thomas-subaric/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline' }}>
+                  LinkedIn
+                </a>
+              </p>
+              <p>
+                <a href="https://github.com/tsubaric" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline' }}>
+                  GitHub
+                </a>
+              </p>
+            </div>
+            {/* Resume Column */}
+            <div style={{ flex: 1, minWidth: 180 }}>
+              <h3 style={{ color: '#fff', marginBottom: 12 }}>My Resume</h3>
+              <p>
+                <a href="/resume.html" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline' }}>
+                  View Resume
+                </a>
+              </p>
+            </div>
+            {/* Contact Info Column */}
+            <div style={{ flex: 1, minWidth: 180 }}>
+              <h3 style={{ color: '#fff', marginBottom: 12 }}>Contact</h3>
+              <p>
+                <a href="mailto:tjsubaric@gmail.com" style={{ color: '#fff', textDecoration: 'underline' }}>
+                  tjsubaric@gmail.com
+                </a>
+              </p>
+              <p>
+                <span style={{ color: '#fff' }}>847-271-0993</span>
+              </p>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
