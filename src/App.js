@@ -98,12 +98,29 @@ function App() {
         </section>
         <hr className="section-divider" />
         <section ref={aboutRef} className="section-about" style={{ minHeight: '80vh', paddingBottom: 40 }}>
-          <div className="text-section">
-            <h2>About Me</h2>
-            <h3>Software Engineer</h3>
-            <p>
-              This is the about section. Add more details about yourself, your role, and any other relevant information here.
-            </p>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            maxWidth: 900,
+            margin: '0 auto'
+          }}>
+            <div className="text-section">
+              <h2>About</h2>
+              <h3>Software Engineer</h3>
+              <p>
+                Experienced in the fields of Software Engineering, Applied AI/ML, and Human-Computer Interaction. I grew up in a small Iowa farm town (home to the Field of Dreams) and currently live in Iowa City. Outside of programming, I enjoy lifting weights, cooking, and watching UFC events. I'm always eager to learn new skills and technologies, so feel free to reach out regarding any software engineering related opportunities.
+                Languages: C++, Python, Java, Swift, JavaScript
+                Technologies: PyTorch, TensorFlow, React.js, Node.js, AWS, Docker, Git, HTML/CSS
+                Engineering Experience: SWE Intern @ Apple, John Deere, Bio::Neos
+                Notable Experience: Holo Reality Lab Undergraduate Researcher, University of Iowa Teaching Assistant
+              </p>
+            </div>
+            <img
+              src={portrait}
+              alt="Profile"
+              className="about-profile-pic"
+            />
           </div>
         </section>
         <hr className="section-divider" />

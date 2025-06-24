@@ -236,3 +236,28 @@ body {
   gap: 1.5rem;
   margin-top: 1rem;
 }
+
+.about-profile-pic {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 40px;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
+  border: 4px solid #fff;
+  background: #e0f7f1;
+}
+
+/* Use a monospace font for all code elements */
+code, pre, .code, .CodeMirror, .prism-code {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace !important;
+  font-size: 1em;
+  background: #f5f7fa;
+  color: #2e3a59;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+body, .App, .text-section, .home-intro, .home-title, .home-subtitle, .home-icons, .about-profile-pic, .top-bar, .section-home, .section-about, .section-portfolio, .section-resume, .section-contact, h1, h2, h3, h4, h5, h6, p, a, span, div, button, input, textarea {
+  font-family: 'Courier New', Courier, monospace !important;
+}
