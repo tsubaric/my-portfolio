@@ -7,7 +7,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import PersonIcon from '@mui/icons-material/Person';
-import DescriptionIcon from '@mui/icons-material/Description';
 import WorkIcon from '@mui/icons-material/Work';
 import HomeIcon from '@mui/icons-material/Home';
 import EmailIcon from '@mui/icons-material/Email';
@@ -17,7 +16,6 @@ function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
-  const resumeRef = useRef(null);
   const contactRef = useRef(null);
 
   // Scroll to section helper
@@ -126,7 +124,13 @@ function App() {
           <iframe
             src="/portfolio.html"
             title="Portfolio"
-            style={{ width: '100%', height: '80vh', border: 'none' }}
+            style={{
+              width: '100%',
+              height: '80vh',
+              border: 'none',
+              background: 'transparent',
+              boxShadow: 'none' // Remove any shadow/border
+            }}
           />
         </section>
         <hr className="section-divider" />
@@ -159,7 +163,7 @@ function App() {
             </div>
             {/* Social Media Column */}
             <div style={{ flex: 1, minWidth: 180 }}>
-              <h3 style={{ color: '#fff', marginBottom: 12 }}>Social</h3>
+              <h3 style={{ color: '#fff', marginBottom: 12 }}>Socials</h3>
               <p>
                 <a href="https://www.linkedin.com/in/thomas-subaric/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline' }}>
                   LinkedIn
