@@ -61,12 +61,20 @@ function App() {
       </div>
       {/* Main content */}
       <div style={{ padding: '2rem' }}>
-        <section ref={homeRef} className="section-home" style={{ minHeight: '80vh', paddingBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ textAlign: 'center', width: '100%' }}>
-            <div style={{ fontSize: '1.4rem', color: '#2e3a59', marginBottom: '0.5rem', fontWeight: 400 }}>
-              Hi! my name is
-            </div>
-            <div style={{ fontSize: '3rem', fontWeight: 700, color: '#2e3a59', marginBottom: '1.2rem', letterSpacing: '1px', display: 'inline-block' }}>
+        <section
+          ref={homeRef}
+          className="section-home"
+          style={{
+            minHeight: '80vh',
+            paddingBottom: 40,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <div className="home-intro">
+            <div className="home-subtitle">Hi! my name is</div>
+            <div className="home-title">
               Tommy Subaric
               <span className="blinking-cursor" style={{
                 display: 'inline-block',
@@ -78,7 +86,7 @@ function App() {
                 verticalAlign: 'bottom'
               }}>|</span>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginTop: '1rem' }}>
+            <div className="home-icons">
               <a href="https://www.linkedin.com/in/thomas-subaric/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <LinkedInIcon style={{ fontSize: 40, color: '#0077b5' }} />
               </a>
@@ -90,15 +98,13 @@ function App() {
         </section>
         <hr className="section-divider" />
         <section ref={aboutRef} className="section-about" style={{ minHeight: '80vh', paddingBottom: 40 }}>
-          <header className="App-header">
-            <div className="text-section">
-              <h2>About</h2>
-              <h3>Software Engineer</h3>
-              <p>
-                This is the about section. Add more details about yourself, your role, and any other relevant information here.
-              </p>
-            </div>
-          </header>
+          <div className="text-section">
+            <h2>About Me</h2>
+            <h3>Software Engineer</h3>
+            <p>
+              This is the about section. Add more details about yourself, your role, and any other relevant information here.
+            </p>
+          </div>
         </section>
         <hr className="section-divider" />
         <section ref={portfolioRef} className="section-portfolio" style={{ minHeight: '80vh', paddingBottom: 40 }}>
