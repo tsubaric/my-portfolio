@@ -193,3 +193,13 @@ body {
   z-index: 1;
   padding-bottom: 0;
 }
+
+.blinking-cursor {
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}

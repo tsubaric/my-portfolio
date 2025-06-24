@@ -61,17 +61,32 @@ function App() {
       </div>
       {/* Main content */}
       <div style={{ padding: '2rem' }}>
-        <section ref={homeRef} className="section-home" style={{ minHeight: '80vh', paddingBottom: 40 }}>
-          <header className="App-header">
-            <div className="text-section">
-              <h2>Home</h2>
-              <h3>Welcome to my portfolio site!</h3>
-              <p>
-                This is the home section. Add a welcome message or introduction here.
-              </p>
+        <section ref={homeRef} className="section-home" style={{ minHeight: '80vh', paddingBottom: 40, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ textAlign: 'center', width: '100%' }}>
+            <div style={{ fontSize: '1.4rem', color: '#2e3a59', marginBottom: '0.5rem', fontWeight: 400 }}>
+              Hi! my name is
             </div>
-            <img src={portrait} className="App-logo" alt="Portrait" />
-          </header>
+            <div style={{ fontSize: '3rem', fontWeight: 700, color: '#2e3a59', marginBottom: '1.2rem', letterSpacing: '1px', display: 'inline-block' }}>
+              Tommy Subaric
+              <span className="blinking-cursor" style={{
+                display: 'inline-block',
+                width: '18px',
+                marginLeft: '2px',
+                color: '#2e3a59',
+                fontWeight: 400,
+                fontSize: '3rem',
+                verticalAlign: 'bottom'
+              }}>|</span>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginTop: '1rem' }}>
+              <a href="https://www.linkedin.com/in/thomas-subaric/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <LinkedInIcon style={{ fontSize: 40, color: '#0077b5' }} />
+              </a>
+              <a href="https://github.com/tsubaric" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <GitHubIcon style={{ fontSize: 40, color: '#222' }} />
+              </a>
+            </div>
+          </div>
         </section>
         <hr className="section-divider" />
         <section ref={aboutRef} className="section-about" style={{ minHeight: '80vh', paddingBottom: 40 }}>
