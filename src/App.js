@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import pfp from './Arthur_PFP.jpeg';
+import React, { useRef } from 'react';
 import portrait from './Arthur Morgan.jpeg';
 import './App.css';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -11,87 +9,108 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PersonIcon from '@mui/icons-material/Person';
 import DescriptionIcon from '@mui/icons-material/Description';
 import WorkIcon from '@mui/icons-material/Work';
-
-const label = { inputProps: { 'aria-label': 'Switch demo' } };
+import HomeIcon from '@mui/icons-material/Home';
+import EmailIcon from '@mui/icons-material/Email';
 
 function App() {
-  const [showResume, setShowResume] = useState(false);
+  // Create refs for each section
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const resumeRef = useRef(null);
+  const contactRef = useRef(null);
 
-  const handleResumeClick = (e) => {
-    e.preventDefault();
-    setShowResume(true);
+  // Scroll to section helper
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div className="App">
-      <div className="mint-green-bar">
-        <h1>Tommy Subaric</h1>
-        <div className="center-container">
-          {/* eslint-disable-next-line */}
-          <img src={pfp} alt="Profile Picture" className="profile-picture" />
-          <div className="social-media-buttons">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-              <LinkedInIcon fontSize="medium" color="primary" alt="LinkedIn" />
-            </a>
-            <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
-              <GitHubIcon fontSize="medium" color="primary" alt="GitHub" />
-            </a>
+      {/* Top navigation bar */}
+      <div className="top-bar" style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center', // Center the nav bar content
+        background: '#e0f7f1',
+        padding: '0.5rem 2rem',
+        borderBottom: '1px solid #b2dfdb'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <div onClick={() => scrollToSection(homeRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <IconButton aria-label="home" size="small"><HomeIcon /></IconButton>
+            <span>Home</span>
+          </div>
+          <div onClick={() => scrollToSection(aboutRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <IconButton aria-label="about me" size="small"><PersonIcon /></IconButton>
+            <span>About</span>
+          </div>
+          <div onClick={() => scrollToSection(portfolioRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <IconButton aria-label="portfolio" size="small"><WorkIcon /></IconButton>
+            <span>Portfolio</span>
+          </div>
+          <div onClick={() => scrollToSection(resumeRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <IconButton aria-label="resume" size="small"><DescriptionIcon /></IconButton>
+            <span>Resume</span>
+          </div>
+          <div onClick={() => scrollToSection(contactRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <IconButton aria-label="contact" size="small"><EmailIcon /></IconButton>
+            <span>Contact</span>
           </div>
         </div>
-        <h4>Hi, my name is Tommy Subaric and I'm a Software Engineer. Welcome to my personal website!</h4>
-        <div className="separator"></div>
-        <div className="holder">
-          <IconButton aria-label="about me">
-            <PersonIcon />
-          </IconButton>
-          About Me
-        </div>
-        <div className="holder">
-          <IconButton aria-label="resume">
-            <DescriptionIcon />
-          </IconButton>
-          Resume
-        </div>
-        <div className="holder">
-          <IconButton aria-label="portfolio">
-            <WorkIcon />
-          </IconButton>
-          Portfolio
-        </div>
-        <div className="separator"></div>
-        <Button variant="contained" color="primary">Contact Me</Button>
       </div>
-      <header className="App-header">
-        <div className="text-section">
-          <h2>Tommy Subaric</h2>
-          <h3>Software Engineer</h3>
-          <p>
-            This is a description. Add more details about the person, their role, and any other relevant information here.
-          </p>
-          <div className="button-group">
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={handleResumeClick}
-            >
-              View Resume
-            </Button>
-            <Button variant="contained" color="primary">View Portfolio</Button>
-          </div>
-        </div>
-        <img src={portrait} className="App-logo" alt="Portrait" />
-      </header>
-      <h1>
-        {showResume ? (
+      {/* Main content */}
+      <div style={{ padding: '2rem' }}>
+        <section ref={homeRef} className="section-home" style={{ minHeight: '80vh', paddingBottom: 40 }}>
+          <header className="App-header">
+            <div className="text-section">
+              <h2>Home</h2>
+              <h3>Welcome to my portfolio site!</h3>
+              <p>
+                This is the home section. Add a welcome message or introduction here.
+              </p>
+            </div>
+            <img src={portrait} className="App-logo" alt="Portrait" />
+          </header>
+        </section>
+        <hr className="section-divider" />
+        <section ref={aboutRef} className="section-about" style={{ minHeight: '80vh', paddingBottom: 40 }}>
+          <header className="App-header">
+            <div className="text-section">
+              <h2>About</h2>
+              <h3>Software Engineer</h3>
+              <p>
+                This is the about section. Add more details about yourself, your role, and any other relevant information here.
+              </p>
+            </div>
+          </header>
+        </section>
+        <hr className="section-divider" />
+        <section ref={portfolioRef} className="section-portfolio" style={{ minHeight: '80vh', paddingBottom: 40 }}>
+          <h2>Portfolio</h2>
+          <iframe
+            src="/portfolio.html"
+            title="Portfolio"
+            style={{ width: '100%', height: '80vh', border: 'none' }}
+          />
+        </section>
+        <hr className="section-divider" />
+        <section ref={resumeRef} className="section-resume" style={{ minHeight: '80vh', paddingBottom: 40 }}>
+          <h2>Resume</h2>
           <iframe
             src="/resume.html"
             title="Resume"
-            style={{ width: '100%', height: '600px', border: 'none' }}
+            style={{ width: '100%', height: '80vh', border: 'none' }}
           />
-        ) : (
-          'Test Test'
-        )}
-      </h1>
+        </section>
+        <hr className="section-divider" />
+        <section ref={contactRef} className="section-contact" style={{ minHeight: '40vh', paddingBottom: 40 }}>
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:tjsubaric@gmail.com">tjsubaric@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/thomas-subaric/" target="_blank" rel="noopener noreferrer">linkedin.com/in/thomas-subaric</a></p>
+          <p>GitHub: <a href="https://github.com/tsubaric" target="_blank" rel="noopener noreferrer">github.com/tsubaric</a></p>
+        </section>
+      </div>
     </div>
   );
 }

@@ -27,35 +27,95 @@ body {
   color: #61dafb;
 }
 
-.mint-green-bar {
+.top-bar {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 20%;
-  height: 100vh;
-  background-color: rgb(56, 235, 145);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 520px; /* wider to fit icons + text */
+  height: 64px;
+  background: #e0f7f1;
+  border-radius: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  margin-top: 20px;
+  padding: 0 32px;
+  gap: 1.5rem;
+}
+
+.top-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.top-bar .MuiIconButton-root {
+  background: white;
+  border-radius: 50%;
+  margin-right: 6px;
+  transition: background 0.2s;
+}
+
+.top-bar .MuiIconButton-root:hover {
+  background: #b2dfdb;
+}
+
+.top-bar span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2e7d6b;
+  margin-right: 8px;
+}
+
+.top-bar .profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.circle-taskbar {
+  position: fixed;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background: #e0f7f1;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  z-index: 101;
+  gap: 12px;
 }
 
-.mint-green-bar h1 {
-  margin-bottom: 1rem;
-}
-
-.mint-green-bar img {
-  width: 200px; 
-  height: 200px; 
-  border-radius: 50%; /* Make the profile picture circular */
-}
-
-.social-media-buttons {
+.circle-taskbar .task-icon {
+  background: white;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
   display: flex;
-  flex-direction: row; /* Align buttons horizontally */
-  gap: 10px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.circle-taskbar .task-icon:hover {
+  background: #b2dfdb;
+}
+
+/* Remove old mint-green-bar styles if not needed */
+.mint-green-bar {
+  display: none;
 }
 
 .separator {
@@ -104,4 +164,32 @@ body {
 
 .holder > span {
   margin-left: 10px; /* Add space between icon and text */
+}
+
+/* Section divider line for each section */
+.section-divider {
+  width: 100%;
+  height: 32px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #2e3a59 20%,
+    #b0b6be 50%,
+    #fff 80%,
+    transparent 100%
+  );
+  margin: 0;
+  border: none;
+  display: block;
+}
+
+/* Optional: Add more margin between sections if needed */
+.section-home,
+.section-about,
+.section-portfolio,
+.section-resume,
+.section-contact {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0;
 }
