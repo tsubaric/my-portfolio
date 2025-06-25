@@ -2,14 +2,13 @@ import React, { useRef } from 'react';
 import portrait from './Arthur Morgan.jpeg';
 import './App.css';
 import IconButton from '@mui/material/IconButton';
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
 import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
 import HomeIcon from '@mui/icons-material/Home';
 import EmailIcon from '@mui/icons-material/Email';
+import DescriptionIcon from '@mui/icons-material/Description'; // Add this import
 
 function App() {
   // Create refs for each section
@@ -67,7 +66,8 @@ function App() {
             justifyContent: 'center'
           }}
         >
-          <div className="home-intro">
+          <div className="home-intro" style={{ position: 'relative' }}>
+            {/* Removed top-right logo that links to resume */}
             <div className="home-subtitle">Hi! my name is</div>
             <div className="home-title">
               Tommy Subaric
@@ -88,6 +88,25 @@ function App() {
               <a href="https://github.com/tsubaric" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <GitHubIcon style={{ fontSize: 40, color: '#222' }} />
               </a>
+              {/* Resume Doc Icon */}
+              <a
+                href="/resume.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Resume"
+                style={{ display: 'inline-block', marginLeft: 8, verticalAlign: 'middle' }}
+              >
+                <DescriptionIcon style={{
+                  fontSize: 40, // Match other icons
+                  color: '#2e3a59',
+                  // Removed background, border, borderRadius, boxShadow, and padding
+                  transition: 'transform 0.2s',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.08)')}
+                onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')}
+                />
+              </a>
             </div>
           </div>
         </section>
@@ -104,7 +123,7 @@ function App() {
               <h2>About</h2>
               <h3>Software Engineer</h3>
               <p>
-                Experienced in the fields of Software Engineering, Applied AI/ML, and Human-Computer Interaction. I grew up in a small Iowa farm town (home to the Field of Dreams) and currently live in Iowa City. Outside of programming, I enjoy lifting weights, cooking, and watching UFC events. I'm always eager to learn new skills and technologies, so feel free to reach out regarding any software engineering related opportunities.
+                Experienced in the fields of Software Engineering, Applied AI/ML, and Human-Computer Interaction. Outside of programming, I enjoy lifting weights, cooking, and watching UFC events. I'm always eager to learn new skills and technologies, so feel free to reach out regarding any software engineering related opportunities.
                 Languages: C++, Python, Java, Swift, JavaScript
                 Technologies: PyTorch, TensorFlow, React.js, Node.js, AWS, Docker, Git, HTML/CSS
                 Engineering Experience: SWE Intern @ Apple, John Deere, Bio::Neos
