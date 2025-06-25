@@ -1,10 +1,14 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  background: url('./stacked-waves-haikei.svg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -12,15 +16,14 @@ body {
   padding: 20px;
 }
 
+/* Remove the App-header design */
 .App-header {
-  background-color: #282c34;
-  min-height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center content horizontally */
-  padding: 20px;
-  color: white;
-  margin-left: 20%; /* Offset by the width of the mint-green bar */
+  background-color: transparent;
+  min-height: unset;
+  display: none;
+  padding: 0;
+  color: inherit;
+  margin-left: 0;
 }
 
 .App-link {
@@ -166,36 +169,9 @@ body {
   margin-left: 10px; /* Add space between icon and text */
 }
 
-/* Section divider line for each section */
-.section-divider {
-  width: 100%;
-  height: 32px;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    #2e3a59 20%,
-    #b0b6be 50%,
-    #fff 80%,
-    transparent 100%
-  );
-  margin: 0;
-  border: none;
-  display: block;
-}
-
-/* Optional: Add more margin between sections if needed */
-.section-home,
-.section-about,
-.section-portfolio,
-.section-resume,
-.section-contact {
-  position: relative;
-  z-index: 1;
-  padding-bottom: 0;
-}
-
 .blinking-cursor {
   animation: blink 1s steps(2, start) infinite;
+  color: #fff !important;
 }
 
 @keyframes blink {
@@ -258,6 +234,43 @@ code, pre, .code, .CodeMirror, .prism-code {
   padding: 2px 6px;
 }
 
-body, .App, .text-section, .home-intro, .home-title, .home-subtitle, .home-icons, .about-profile-pic, .top-bar, .section-home, .section-about, .section-portfolio, .section-resume, .section-contact, h1, h2, h3, h4, h5, h6, p, a, span, div, button, input, textarea {
-  font-family: 'Courier New', Courier, monospace !important;
+/* Add this to the bottom of your App.css file to make all text white */
+body,
+.App,
+.text-section,
+.home-intro,
+.home-title,
+.home-subtitle,
+.home-icons,
+.about-profile-pic,
+.top-bar,
+.section-home,
+.section-about,
+.section-portfolio,
+.section-resume,
+.section-contact,
+.footer-contact,
+h1, h2, h3, h4, h5, h6,
+p, a, span, div, button, input, textarea {
+  color: #fff;
+}
+
+.home-intro .home-title,
+.home-intro .home-subtitle {
+  color: #fff !important;
+}
+
+.home-icons .MuiSvgIcon-root[aria-label="GitHub"],
+.home-icons .MuiSvgIcon-root[aria-label="Resume"],
+.home-icons .MuiSvgIcon-root[data-testid="GitHubIcon"],
+.home-icons .MuiSvgIcon-root[data-testid="DescriptionIcon"] {
+  color: #fff !important;
+}
+
+.section-divider {
+  border: none;
+  border-top: 2px solid rgba(255,255,255,0.5);
+  margin: 48px 0;
+  width: 100%;
+  background: black;
 }

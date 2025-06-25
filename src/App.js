@@ -53,7 +53,6 @@ function App() {
           </div>
         </div>
       </div>
-      {/* Main content */}
       <div style={{ padding: '2rem' }}>
         <section
           ref={homeRef}
@@ -154,7 +153,17 @@ function App() {
         </section>
         <hr className="section-divider" />
         {/* Removed Resume Section */}
-        <footer ref={contactRef} className="section-contact footer-contact" style={{ minHeight: 'unset', padding: '40px 0 20px 0', background: '#2e3a59', color: '#fff' }}>
+        <footer
+          ref={contactRef}
+          className="section-contact footer-contact"
+          style={{
+            minHeight: 'unset',
+            padding: '40px 0 20px 0',
+            background: 'transparent', // Changed from '#2e3a59' to transparent
+            color: '#fff',
+            boxShadow: 'none' // Ensure no shadow
+          }}
+        >
           <div style={{
             display: 'flex',
             justifyContent: 'center',
