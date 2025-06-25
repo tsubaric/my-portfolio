@@ -16,7 +16,6 @@ body {
   padding: 20px;
 }
 
-/* Remove the App-header design */
 .App-header {
   background-color: transparent;
   min-height: unset;
@@ -35,9 +34,9 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  min-width: 520px; /* wider to fit icons + text */
+  min-width: 520px;
   height: 64px;
-  background: #e0f7f1;
+  background: #263447; /* Bluish dark gray */
   border-radius: 40px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   display: flex;
@@ -69,7 +68,7 @@ body {
 .top-bar span {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #2e7d6b;
+  color: #fff !important; /* Ensure nav text is white */
   margin-right: 8px;
 }
 
@@ -265,6 +264,10 @@ p, a, span, div, button, input, textarea {
 .home-icons .MuiSvgIcon-root[data-testid="GitHubIcon"],
 .home-icons .MuiSvgIcon-root[data-testid="DescriptionIcon"] {
   color: #fff !important;
+}
+
+.home-icons .MuiSvgIcon-root[data-testid="DescriptionIcon"] {
+  color: #0077b5 !important; /* LinkedIn blue */
 }
 
 .section-divider {

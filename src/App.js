@@ -29,9 +29,9 @@ function App() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center', // Center the nav bar content
-        background: '#e0f7f1',
+        background: '#2e3a59',
         padding: '0.5rem 2rem',
-        borderBottom: '1px solid #b2dfdb'
+        borderBottom: '1px solidrgb(14, 15, 82)'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <div onClick={() => scrollToSection(homeRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
