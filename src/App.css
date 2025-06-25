@@ -274,14 +274,3 @@ p, a, span, div, button, input, textarea {
   width: 100%;
   background: black;
 }
-
-/* Reduce space between About and Portfolio sections */
-.section-about {
-  margin-bottom: 2px !important;
-  padding-bottom: 2px !important;
-}
-
-.section-portfolio {
-  margin-top: 2px !important;
-  padding-top: 2px !important;
-}
