@@ -269,8 +269,19 @@ p, a, span, div, button, input, textarea {
 
 .section-divider {
   border: none;
-  border-top: 2px solid rgba(255,255,255,0.5);
+  /* border-top: 2px solid rgba(255,255,255,0.5); */
   margin: 48px 0;
   width: 100%;
   background: black;
+}
+
+/* Reduce space between About and Portfolio sections */
+.section-about {
+  margin-bottom: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+.section-portfolio {
+  margin-top: 2px !important;
+  padding-top: 2px !important;
 }
