@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Resume</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0 0 40px 0;
+      background: #f5f7fa;
+      color: #2e3a59;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 24px 0 0 24px;
+      padding: 10px 28px;
+      font-size: 1.1rem;
+      background: #2e3a59;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .back-btn:hover {
+      background: #1a2233;
+    }
+    .resume-container {
+      background: #fff;
+      max-width: 900px;
+      margin: auto;
+      padding: 32px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 2.2em;
+      color: #2e7d6b;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      font-size: 1.3em;
+      margin-top: 1.5em;
+      color: #333;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 0.2em;
+    }
+    h3 {
+      margin-bottom: 0.2em;
+      font-size: 1.1em;
+      color: #222;
+    }
+    .contact {
+      margin-bottom: 1.5em;
+      font-size: 1em;
+    }
+    .section {
+      margin-bottom: 1.5em;
+    }
+    .job-title, .project-title {
+      font-weight: bold;
+    }
+    .job-meta, .project-meta {
+      float: right;
+      font-style: italic;
+      color: #666;
+      font-size: 0.95em;
+    }
+    ul {
+      margin: 0.5em 0 1em 1.5em;
+    }
+    .skills-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .skills-list li {
+      margin-bottom: 0.3em;
+    }
+    .clear {
+      clear: both;
+    }
+    a {
+      color: #2e7d6b;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="back-btn">&larr; Back</a>
+  <div class="resume-container">
+    <h1>Thomas Subaric</h1>
+    <div class="contact">
+      847-271-0993 &nbsp;|&nbsp;
+      <a href="mailto:tjsubaric@gmail.com">tjsubaric@gmail.com</a> &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/thomas-subaric/" target="_blank">linkedin.com/in/thomas-subaric</a> &nbsp;|&nbsp;
+      <a href="https://github.com/tsubaric" target="_blank">github.com/tsubaric</a>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <div>
+        <span class="job-title">University of Iowa</span>
+        <span class="job-meta">Iowa City, IA</span>
+        <div class="clear"></div>
+        <span>Bachelor of Science in Engineering, Computer Science and Engineering</span>
+        <span class="job-meta">Graduation: December 2023</span>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <div>
+        <span class="job-title">Bosch Rexroth: A Bosch Company</span>
+        <span class="job-meta">March 2024 -- Present</span>
+        <div class="clear"></div>
+        <span><em>IT Analyst</em>, Lincolnshire, IL</span>
+        <ul>
+          <li>Embedded Power BI Analytics with Fabric Premium Capacity to deliver interactive, real-time sales analytics, enabling data-driven decision-making and improving sales performance internationally. Optimized reports by leveraging Entra and Fabric Premium capabilities, achieving faster report load times and enhanced scalability for high-volume sales data with roles and views secure access for each user.</li>
+          <li>Implemented ADA compliance on the company website IAAP Certification training with Deque University accessibility tools, ensuring the website met WCAG 2.1 standards, increasing site accessibility for all users by 100%. Collaborated with cross-functional teams to redesign and refactor key website components for better user experience (UX) and accessibility, improving site performance and avoiding legal accessibility complaints.</li>
+          <li>Developed an EDI inbound parse and outbound merge communication processes within SAP using C#, and .NET, resulting in improved data transfer efficiency during our merger implementation without having to outsource. Automated EDI customer Dropship Notifications, enabling seamless integration between SAP and external systems, enhancing operational workflows, and ensuring real-time data exchange to support critical business processes.</li>
+        </ul>
+      </div>
+      <div>
+        <span class="job-title">HydraForce</span>
+        <span class="job-meta">June 2023 -- August 2023</span>
+        <div class="clear"></div>
+        <span><em>IT Intern</em>, Lincolnshire, IL</span>
+        <ul>
+          <li>Leveraged Azure DevOps to track and analyze team performance metrics, identifying areas for improvement and optimizing development workflows. Created and maintained interactive PowerBI dashboards to visualize key performance indicators and project metrics, facilitating data-driven decision-making. Implemented Power Automate Scripts for a smooth workflow.</li>
+          <li>Diagnosed and resolved a range of technology issues on the manufacturing floor, spanning computer, printer, network, and hardware challenges. Ensured seamless operations by promptly addressing technical glitches and measuring success through the swift resolution of issues. 75+ ServiceNow Tickets completed.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <div>
+        <span class="project-title">NFTicket</span>
+        <span class="project-meta">React, Node.js, Firebase, Metamask, JavaScript, Git, Jira | Nov 2022 -- May 2023</span>
+        <div class="clear"></div>
+        <ul>
+          <li>Developed a full-stack web application with Node.js serving a REST API and React as the frontend. NFTickets allow users to browse, create, buy and sell NFTickets for any events and Festivals using Blockchain.</li>
+          <li>Integrated the Metamask plugin for Goerli Crypto Wallet, facilitating seamless transactions with real currency. Connected to the Firebase database to store and manage all events and related information.</li>
+          <li>By offering users digital memorabilia in the form of NFTickets, the application modernizes the event experience, ensuring the sustainability and relevance of NFTs in the digital era. This innovative approach adds value by uniquely preserving and commemorating users' event experiences in a digital format.</li>
+        </ul>
+      </div>
+      <div>
+        <span class="project-title">Doctor &amp; Patient Portal</span>
+        <span class="project-meta">Java Spring, HTML, Maven, MySQL, Workbench, Git | Jan 2023 -- May 2023</span>
+        <div class="clear"></div>
+        <ul>
+          <li>Developed a web server using Java Spring Boot and HTML for a full-stack application facilitating patient appointments with doctors/nurses connected to MySQL Server with Workbench.</li>
+          <li>Implemented secure registration and login functionalities for admins, patients, and employees. Utilized Spring Boot dependencies including JPA Queries, Web, Security, and Thymeleaf for frontend. Established an admin CRUD board for user maintenance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Languages:</strong> C#, C++, C, Java, Python, SQL, JavaScript, TypeScript, HTML, CSS, R, AVR Assembly, Haskell</li>
+        <li><strong>Frameworks:</strong> React, Node.js, .NET, Flask, Java Spring Boot, AWS, Azure, GCP, JUnit, Selenium, Arduino</li>
+        <li><strong>Developer Tools:</strong> GitHub, GitLab, Docker, Firebase, MySQL Server, VS Code, Visual Basic, PyCharm, IntelliJ, Eclipse, Postgres SQL, MongoDB, Neo4j, Redis, Power BI, Power Automate, MetaMask, Snowflake, Copilot, AI</li>
+        <li><strong>Industry:</strong> Agile Development, SAP Merger, Azure DevOps, ADA Compliance IAAP Certified, Jira Backlog, Electronic Data Interchange, CI/CD, Fiori SAP Support, Consulting with Vendors</li>
+        <li><strong>Soft:</strong> Critical Thinking, Adaptability, Reliability, Determination, and Communication Skills</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

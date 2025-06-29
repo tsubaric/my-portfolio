@@ -1,10 +1,14 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  background: url('./stacked-waves-haikei.svg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -13,49 +17,107 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center content horizontally */
-  padding: 20px;
-  color: white;
-  margin-left: 20%; /* Offset by the width of the mint-green bar */
+  background-color: transparent;
+  min-height: unset;
+  display: none;
+  padding: 0;
+  color: inherit;
+  margin-left: 0;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.mint-green-bar {
+.top-bar {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 20%;
-  height: 100vh;
-  background-color: rgb(56, 235, 145);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 520px;
+  height: 64px;
+  background: #263447; /* Bluish dark gray */
+  border-radius: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  margin-top: 20px;
+  padding: 0 32px;
+  gap: 1.5rem;
+}
+
+.top-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.top-bar .MuiIconButton-root {
+  background: white;
+  border-radius: 50%;
+  margin-right: 6px;
+  transition: background 0.2s;
+}
+
+.top-bar .MuiIconButton-root:hover {
+  background: #b2dfdb;
+}
+
+.top-bar span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff !important; /* Ensure nav text is white */
+  margin-right: 8px;
+}
+
+.top-bar .profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.circle-taskbar {
+  position: fixed;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background: #e0f7f1;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  z-index: 101;
+  gap: 12px;
 }
 
-.mint-green-bar h1 {
-  margin-bottom: 1rem;
-}
-
-.mint-green-bar img {
-  width: 200px; 
-  height: 200px; 
-  border-radius: 50%; /* Make the profile picture circular */
-}
-
-.social-media-buttons {
+.circle-taskbar .task-icon {
+  background: white;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
   display: flex;
-  flex-direction: row; /* Align buttons horizontally */
-  gap: 10px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.circle-taskbar .task-icon:hover {
+  background: #b2dfdb;
+}
+
+/* Remove old mint-green-bar styles if not needed */
+.mint-green-bar {
+  display: none;
 }
 
 .separator {
@@ -104,4 +166,114 @@ body {
 
 .holder > span {
   margin-left: 10px; /* Add space between icon and text */
+}
+
+.blinking-cursor {
+  animation: blink 1s steps(2, start) infinite;
+  color: #fff !important;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Add this for the home intro alignment */
+.home-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 420px;
+}
+
+.home-intro .home-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2e3a59;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.home-intro .home-subtitle {
+  font-size: 1.4rem;
+  color: #2e3a59;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.home-intro .home-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.about-profile-pic {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 40px;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
+  border: 4px solid #fff;
+  background: #e0f7f1;
+}
+
+/* Use a monospace font for all code elements */
+code, pre, .code, .CodeMirror, .prism-code {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace !important;
+  font-size: 1em;
+  background: #f5f7fa;
+  color: #2e3a59;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* Add this to the bottom of your App.css file to make all text white */
+body,
+.App,
+.text-section,
+.home-intro,
+.home-title,
+.home-subtitle,
+.home-icons,
+.about-profile-pic,
+.top-bar,
+.section-home,
+.section-about,
+.section-portfolio,
+.section-resume,
+.section-contact,
+.footer-contact,
+h1, h2, h3, h4, h5, h6,
+p, a, span, div, button, input, textarea {
+  color: #fff;
+}
+
+.home-intro .home-title,
+.home-intro .home-subtitle {
+  color: #fff !important;
+}
+
+.home-icons .MuiSvgIcon-root[aria-label="GitHub"],
+.home-icons .MuiSvgIcon-root[aria-label="Resume"],
+.home-icons .MuiSvgIcon-root[data-testid="GitHubIcon"],
+.home-icons .MuiSvgIcon-root[data-testid="DescriptionIcon"] {
+  color: #fff !important;
+}
+
+.home-icons .MuiSvgIcon-root[data-testid="DescriptionIcon"] {
+  color: #0077b5 !important; /* LinkedIn blue */
+}
+
+.section-divider {
+  border: none;
+  /* border-top: 2px solid rgba(255,255,255,0.5); */
+  margin: 48px 0;
+  width: 100%;
+  background: black;
 }
