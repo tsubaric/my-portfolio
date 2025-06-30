@@ -277,3 +277,66 @@ p, a, span, div, button, input, textarea {
   width: 100%;
   background: black;
 }
+
+/* Footer Styling */
+footer {
+  background-color: #2e3a59;
+  color: #fff;
+  padding: 32px 20px;
+}
+
+footer .grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+  gap: 20px;
+}
+
+footer h4, footer h5 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 8px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Portfolio Section Styling */
+.section-portfolio {
+  padding: 40px 20px;
+  background-color: transparent; /* Keep the section background transparent */
+}
+
+.portfolio-grid {
+  display: flex; /* Use flexbox for horizontal stacking */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the cards horizontally */
+  flex-wrap: wrap; /* Wrap cards to the next row if needed */
+}
+
+.portfolio-card {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Add padding inside the card */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px); /* Lift the card slightly on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}

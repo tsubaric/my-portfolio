@@ -8,7 +8,13 @@ import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
 import HomeIcon from '@mui/icons-material/Home';
 import EmailIcon from '@mui/icons-material/Email';
-import DescriptionIcon from '@mui/icons-material/Description'; // Add this import
+import DescriptionIcon from '@mui/icons-material/Description';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 function App() {
   // Create refs for each section
@@ -139,90 +145,119 @@ function App() {
         <hr className="section-divider" />
         <section ref={portfolioRef} className="section-portfolio" style={{ minHeight: '80vh', paddingBottom: 40 }}>
           <h2>Portfolio</h2>
-          <iframe
-            src="/portfolio.html"
-            title="Portfolio"
-            style={{
-              width: '100%',
-              height: '80vh',
-              border: 'none',
-              background: 'transparent',
-              boxShadow: 'none' // Remove any shadow/border
-            }}
-          />
+          <div className="portfolio-grid">
+            <Card className="portfolio-card" sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                alt="Project 1"
+                height="140"
+                image="src/Arthur Morgan.jpeg"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Project 1
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  A brief description of Project 1.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Share</Button>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+            <Card className="portfolio-card" sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                alt="Project 2"
+                height="140"
+                image="src/Arthur Morgan.jpeg"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Project 2
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  A brief description of Project 2.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Share</Button>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+            <Card className="portfolio-card" sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                alt="Project 3"
+                height="140"
+                image="src/Arthur Morgan.jpeg"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Project 3
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  A brief description of Project 3.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Share</Button>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </div>
         </section>
         <hr className="section-divider" />
         {/* Removed Resume Section */}
-        <footer
-          ref={contactRef}
-          className="section-contact footer-contact"
-          style={{
-            minHeight: 'unset',
-            padding: '40px 0 20px 0',
-            background: 'transparent', // Changed from '#2e3a59' to transparent
-            color: '#fff',
-            boxShadow: 'none' // Ensure no shadow
-          }}
-        >
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'stretch',
-            gap: '4rem',
-            maxWidth: 1100,
-            margin: '0 auto',
-            flexWrap: 'wrap'
-          }}>
-            {/* Contact Me Title Column */}
-            <div style={{
-              flex: 1,
-              minWidth: 180,
-              display: 'flex',
-              alignItems: 'center', // Vertically center
-              justifyContent: 'flex-start',
-              height: '100%'
-            }}>
-              <span style={{
-                fontSize: '2.2rem',
-                fontWeight: 700,
-                color: '#fff',
-                letterSpacing: 1
-              }}>Contact Me</span>
+        {/* Footer */}
+        <footer className="py-16 border-t" style={{ backgroundColor: '#2e3a59', color: '#fff' }}>
+          <div className="max-w-7xl mx-auto px-6 grid grid-cols-5 gap-8">
+            <div className="footer-column">
+              <h4 className="text-lg font-semibold mb-4">TOMMY JOHNSON</h4>
+              <p className="text-sm">Senior Software Engineer</p>
             </div>
-            {/* Social Media Column */}
-            <div style={{ flex: 1, minWidth: 180 }}>
-              <h3 style={{ color: '#fff', marginBottom: 12 }}>Socials</h3>
-              <p>
-                <a href="https://www.linkedin.com/in/thomas-subaric/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline' }}>
-                  LinkedIn
-                </a>
-              </p>
-              <p>
-                <a href="https://github.com/tsubaric" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline' }}>
-                  GitHub
-                </a>
-              </p>
+            <div className="footer-column">
+              <h5 className="font-medium mb-2">Portfolio</h5>
+              <ul>
+                <li>Projects</li>
+                <li>Experience</li>
+                <li>Skills</li>
+                <li>Contact</li>
+              </ul>
             </div>
-            {/* Resume Column */}
-            <div style={{ flex: 1, minWidth: 180 }}>
-              <h3 style={{ color: '#fff', marginBottom: 12 }}>My Resume</h3>
-              <p>
-                <a href="/resume.html" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline' }}>
-                  View Resume
-                </a>
-              </p>
+            <div className="footer-column">
+              <h5 className="font-medium mb-2">Links</h5>
+              <ul>
+                <li>
+                  <a href="#" className="hover:underline">GitHub</a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">LinkedIn</a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">Resume PDF</a>
+                </li>
+              </ul>
             </div>
-            {/* Contact Info Column */}
-            <div style={{ flex: 1, minWidth: 180 }}>
-              <h3 style={{ color: '#fff', marginBottom: 12 }}>Contact</h3>
-              <p>
-                <a href="mailto:tjsubaric@gmail.com" style={{ color: '#fff', textDecoration: 'underline' }}>
-                  tjsubaric@gmail.com
-                </a>
-              </p>
-              <p>
-                <span style={{ color: '#fff' }}>847-271-0993</span>
-              </p>
+            <div className="footer-column">
+              <h5 className="font-medium mb-2">Contact</h5>
+              <ul>
+                <li>tommy.engineer@email.com</li>
+                <li>+1 (555) 123-4567</li>
+                <li>New York, NY</li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h5 className="font-medium mb-2">Social</h5>
+              <ul>
+                <li>
+                  <a href="#" className="hover:underline">Twitter</a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">Blog</a>
+                </li>
+              </ul>
             </div>
           </div>
         </footer>
