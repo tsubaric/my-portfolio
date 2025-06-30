@@ -225,11 +225,16 @@ function App() {
         <hr className="section-divider" />
         {/* Removed Resume Section */}
         {/* Footer */}
-        <footer className="py-16 border-t" style={{ backgroundColor: '#2e3a59', color: '#fff' }}>
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-5 gap-8">
+        <footer ref={contactRef} className="section-contact" style={{ backgroundColor: '#2e3a59', color: '#fff', padding: '40px 20px' }}>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center', // Center the columns horizontally
+            gap: '160px', // Increased spacing between columns
+            flexWrap: 'wrap', // Ensure responsiveness for smaller screens
+          }}>
             <div className="footer-column">
               <h4 className="text-lg font-semibold mb-4">Tommy Subaric</h4>
-              <p className="text-sm">AI and Automatation Engineer</p>
+              <p className="text-sm">AI and Automation Engineer</p>
             </div>
             <div className="footer-column">
               <h5 className="font-medium mb-2">Portfolio</h5>
