@@ -228,8 +228,8 @@ function App() {
         <footer className="py-16 border-t" style={{ backgroundColor: '#2e3a59', color: '#fff' }}>
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-5 gap-8">
             <div className="footer-column">
-              <h4 className="text-lg font-semibold mb-4">TOMMY JOHNSON</h4>
-              <p className="text-sm">Senior Software Engineer</p>
+              <h4 className="text-lg font-semibold mb-4">Tommy Subaric</h4>
+              <p className="text-sm">AI and Automatation Engineer</p>
             </div>
             <div className="footer-column">
               <h5 className="font-medium mb-2">Portfolio</h5>
@@ -257,20 +257,9 @@ function App() {
             <div className="footer-column">
               <h5 className="font-medium mb-2">Contact</h5>
               <ul>
-                <li>tommy.engineer@email.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>New York, NY</li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h5 className="font-medium mb-2">Social</h5>
-              <ul>
-                <li>
-                  <a href="#" className="hover:underline">Twitter</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">Blog</a>
-                </li>
+                <li>tjsubaric@gmail.com</li>
+                <li>+1(847)271-0993</li>
+                <li>Carpentersville, IL</li>
               </ul>
             </div>
           </div>
