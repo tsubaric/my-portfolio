@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import portrait from './Arthur Morgan.jpeg';
+import portrait from './images/Arthur Morgan.jpeg';
 import './App.css';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -27,6 +27,49 @@ function App() {
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const projects = [
+    {
+      title: "Project 1",
+      description: "A brief description of Project 1.",
+      image: "src/project1.jpeg", // Replace with actual image paths
+    },
+    {
+      title: "Project 2",
+      description: "A brief description of Project 2.",
+      image: "src/project2.jpeg",
+    },
+    {
+      title: "Project 3",
+      description: "A brief description of Project 3.",
+      image: "src/project3.jpeg",
+    },
+    {
+      title: "Project 4",
+      description: "A brief description of Project 4.",
+      image: "src/project4.jpeg",
+    },
+    {
+      title: "Project 5",
+      description: "A brief description of Project 5.",
+      image: "src/project5.jpeg",
+    },
+    {
+      title: "Project 6",
+      description: "A brief description of Project 6.",
+      image: "src/project6.jpeg",
+    },
+    {
+      title: "Project 7",
+      description: "A brief description of Project 7.",
+      image: "src/project7.jpeg",
+    },
+    {
+      title: "Project 8",
+      description: "A brief description of Project 8.",
+      image: "src/project8.jpeg",
+    },
+  ];
 
   return (
     <div className="App">
@@ -72,17 +115,18 @@ function App() {
           }}
         >
           <div className="home-intro" style={{ position: 'relative' }}>
-            {/* Removed top-right logo that links to resume */}
-            <div className="home-subtitle">Hi! my name is</div>
-            <div className="home-title">
+            <div className="home-subtitle" style={{ fontSize: '2rem', fontWeight: 'bold' }}>
+              <span style={{ fontSize: '2rem' }}>👋</span> Hi! My name is
+            </div>
+            <div className="home-title" style={{ fontSize: '3rem' }}>
               Tommy Subaric
               <span className="blinking-cursor" style={{
                 display: 'inline-block',
                 width: '18px',
-                marginLeft: '2px',
+                marginLeft: '3px',
                 color: '#2e3a59',
                 fontWeight: 400,
-                fontSize: '3rem',
+                fontSize: '4rem',
                 verticalAlign: 'bottom'
               }}>|</span>
             </div>
@@ -146,66 +190,36 @@ function App() {
         <section ref={portfolioRef} className="section-portfolio" style={{ minHeight: '80vh', paddingBottom: 40 }}>
           <h2>Portfolio</h2>
           <div className="portfolio-grid">
-            <Card className="portfolio-card" sx={{ maxWidth: 345 }}>
-              <CardMedia
-                component="img"
-                alt="Project 1"
-                height="140"
-                image="src/Arthur Morgan.jpeg"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Project 1
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  A brief description of Project 1.
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
-              </CardActions>
-            </Card>
-            <Card className="portfolio-card" sx={{ maxWidth: 345 }}>
-              <CardMedia
-                component="img"
-                alt="Project 2"
-                height="140"
-                image="src/Arthur Morgan.jpeg"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Project 2
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  A brief description of Project 2.
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
-              </CardActions>
-            </Card>
-            <Card className="portfolio-card" sx={{ maxWidth: 345 }}>
-              <CardMedia
-                component="img"
-                alt="Project 3"
-                height="140"
-                image="src/Arthur Morgan.jpeg"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Project 3
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  A brief description of Project 3.
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
-              </CardActions>
-            </Card>
+            {projects.map((project, index) => (
+              <Card key={index} className="portfolio-card" sx={{
+                maxWidth: 345,
+                backgroundColor: '#2e3a59', // Dark blue-gray background
+                border: '2px solid #fff', // White outline
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Subtle shadow
+                borderRadius: '8px', // Rounded corners
+                padding: '20px', // Internal padding
+                transition: 'transform 0.2s ease, box-shadow 0.2s ease' // Smooth hover effect
+              }}>
+                <CardMedia
+                  component="img"
+                  alt={project.title}
+                  height="140"
+                  image={project.image}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {project.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {project.description}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">Share</Button>
+                  <Button size="small">Learn More</Button>
+                </CardActions>
+              </Card>
+            ))}
           </div>
         </section>
         <hr className="section-divider" />

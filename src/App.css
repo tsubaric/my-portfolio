@@ -1,3 +1,9 @@
+/* Global Font Styling */
+body, h1, h2, h3, h4, h5, h6, p, a, span, div, button, input, textarea {
+  font-family: 'Courier New', Courier, monospace; /* Apply Courier New globally */
+}
+
+/* General Styling */
 body {
   margin: 0;
   padding: 0;
@@ -270,9 +276,9 @@ p, a, span, div, button, input, textarea {
   color: #0077b5 !important; /* LinkedIn blue */
 }
 
+/* Section Divider */
 .section-divider {
   border: none;
-  /* border-top: 2px solid rgba(255,255,255,0.5); */
   margin: 48px 0;
   width: 100%;
   background: black;
@@ -318,18 +324,20 @@ footer ul li a:hover {
 /* Portfolio Section Styling */
 .section-portfolio {
   padding: 40px 20px;
-  background-color: transparent; /* Keep the section background transparent */
+  background-color: transparent;
 }
 
 .portfolio-grid {
-  display: flex; /* Use flexbox for horizontal stacking */
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
   gap: 20px; /* Space between cards */
-  justify-content: center; /* Center the cards horizontally */
-  flex-wrap: wrap; /* Wrap cards to the next row if needed */
+  justify-content: center; /* Center the grid horizontally */
 }
 
+/* Portfolio Card Styling */
 .portfolio-card {
-  background-color: rgba(255, 255, 255, 0.8); /* Light background for the card */
+  background-color: #2e3a59; /* Dark blue-gray background */
+  border: 2px solid #fff; /* White outline */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 20px; /* Add padding inside the card */
