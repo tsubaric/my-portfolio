@@ -30,42 +30,47 @@ function App() {
 
   const projects = [
     {
-      title: "Project 1",
+      title: "NFTicket",
       description: "A brief description of Project 1.",
       image: "src/project1.jpeg", // Replace with actual image paths
     },
     {
-      title: "Project 2",
+      title: "Doctor and Patient Healthcare Portal",
       description: "A brief description of Project 2.",
       image: "src/project2.jpeg",
     },
     {
-      title: "Project 3",
+      title: "SeekerPro",
       description: "A brief description of Project 3.",
       image: "src/project3.jpeg",
     },
     {
-      title: "Project 4",
+      title: "Pong Game",
       description: "A brief description of Project 4.",
       image: "src/project4.jpeg",
     },
     {
-      title: "Project 5",
+      title: "X Social Account Recommendations and Similarities",
       description: "A brief description of Project 5.",
       image: "src/project5.jpeg",
     },
     {
-      title: "Project 6",
+      title: "Asteroids Game",
       description: "A brief description of Project 6.",
       image: "src/project6.jpeg",
     },
     {
-      title: "Project 7",
+      title: "Theory of Computation",
       description: "A brief description of Project 7.",
       image: "src/project7.jpeg",
     },
     {
-      title: "Project 8",
+      title: "Wordle",
+      description: "A brief description of Project 8.",
+      image: "src/project8.jpeg",
+    },
+    {
+      title: "Event Register Application",
       description: "A brief description of Project 8.",
       image: "src/project8.jpeg",
     },
@@ -165,25 +170,37 @@ function App() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            maxWidth: 900,
-            margin: '0 auto'
+            maxWidth: '95%', // Use more screen width
+            margin: '0 auto',
+            gap: '40px', // Add spacing between text and image
           }}>
-            <div className="text-section">
-              <h2>About</h2>
-              <h3>Software Engineer</h3>
-              <p>
-                Experienced in the fields of Software Engineering, Applied AI/ML, and Human-Computer Interaction. Outside of programming, I enjoy lifting weights, cooking, and watching UFC events. I'm always eager to learn new skills and technologies, so feel free to reach out regarding any software engineering related opportunities.
-                Languages: C++, Python, Java, Swift, JavaScript
-                Technologies: PyTorch, TensorFlow, React.js, Node.js, AWS, Docker, Git, HTML/CSS
-                Engineering Experience: SWE Intern @ Apple, John Deere, Bio::Neos
-                Notable Experience: Holo Reality Lab Undergraduate Researcher, University of Iowa Teaching Assistant
+            <div className="text-section" style={{
+              flex: 4, // Increase space for the text section
+              padding: '20px', // Add padding for better spacing
+            }}>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>About</h2>
+              <h3 style={{ fontSize: '2rem', marginBottom: '20px' }}>Software Engineer</h3>
+              <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+                Hi, I’m Tommy Subaric, a passionate Software Automation Engineer. I work with everything from C#, Python, JavaScript and beyond, enabling me to build scalable applications across various platforms. Whether it’s cloud environments like AWS and Azure, or frameworks such as React, and .NET, I specialize in crafting high-performance, reliable solutions. I also apply AI and machine learning to real-world problems, creating automated systems that drive efficiency and innovation. I have experience in CI/CD pipelines, Microsoft Power Platform, SAP integrations, and IT Consulting to enhance system performance. My expertise covers backend architecture, database management (SQL, MongoDB, Redis), and front-end development, giving me a well-rounded approach to building software. Beyond my technical expertise, I bring strong problem-solving skills, adaptability, and a drive for continuous improvement.
               </p>
             </div>
-            <img
-              src={portrait}
-              alt="Profile"
-              className="about-profile-pic"
-            />
+            <div style={{
+              flex: 1, // Keep the image section smaller
+              display: 'flex',
+              justifyContent: 'center', // Center the image horizontally
+              alignItems: 'center', // Center the image vertically
+            }}>
+              <img
+                src={portrait}
+                alt="Profile"
+                className="about-profile-pic"
+                style={{
+                  maxHeight: '600px', // Keep the image size
+                  borderRadius: '50%', // Keep the image circular
+                  objectFit: 'cover', // Ensure the image fits within the circular shape
+                }}
+              />
+            </div>
           </div>
         </section>
         <hr className="section-divider" />
