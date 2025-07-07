@@ -85,7 +85,9 @@ function App() {
         justifyContent: 'center', // Center the nav bar content
         background: '#2e3a59',
         padding: '0.5rem 2rem',
-        borderBottom: '1px solidrgb(14, 15, 82)'
+        borderBottom: '1px solid rgb(14, 15, 82)',
+        // border: '1px solid #fff', // Add white outline
+        borderRadius: '18px', // Optional: Add rounded corners for the outline
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <div onClick={() => scrollToSection(homeRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
@@ -100,7 +102,6 @@ function App() {
             <IconButton aria-label="portfolio" size="small"><WorkIcon /></IconButton>
             <span>Portfolio</span>
           </div>
-          {/* Removed Resume Tab */}
           <div onClick={() => scrollToSection(contactRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
             <IconButton aria-label="contact" size="small"><EmailIcon /></IconButton>
             <span>Contact</span>
@@ -207,7 +208,7 @@ function App() {
             {projects.map((project, index) => (
               <Card key={index} className="portfolio-card" sx={{
                 maxWidth: 345,
-                backgroundColor: '#2e3a59', // Dark blue-gray background
+                backgroundColor: '#3b4a6b', // Slightly lighter blue-gray background
                 border: '2px solid #fff', // White outline
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Subtle shadow
                 borderRadius: '8px', // Rounded corners
@@ -241,43 +242,45 @@ function App() {
         <footer ref={contactRef} className="section-contact" style={{ backgroundColor: '#2e3a59', color: '#fff', padding: '40px 20px' }}>
           <div style={{
             display: 'flex',
-            justifyContent: 'center', // Center the columns horizontally
-            gap: '160px', // Increased spacing between columns
+            justifyContent: 'space-between', // Spread the columns evenly
+            gap: '60px', // Increase spacing between columns
             flexWrap: 'wrap', // Ensure responsiveness for smaller screens
+            maxWidth: '1200px', // Limit the width for better layout
+            margin: '0 auto', // Center the footer content
           }}>
             <div className="footer-column">
-              <h4 className="text-lg font-semibold mb-4">Tommy Subaric</h4>
-              <p className="text-sm">AI and Automation Engineer</p>
+              <h4 className="text-lg font-semibold mb-4" style={{ fontWeight: 'bold' }}>Tommy Subaric</h4>
+              <p className="text-sm" style={{ fontWeight: 'bold' }}>AI and Automation Engineer</p>
             </div>
             <div className="footer-column">
-              <h5 className="font-medium mb-2">Portfolio</h5>
+              <h5 className="font-medium mb-2" style={{ fontWeight: 'bold' }}>Portfolio</h5>
               <ul>
-                <li>Projects</li>
-                <li>Experience</li>
-                <li>Skills</li>
-                <li>Contact</li>
+                <li style={{ fontWeight: 'bold' }}>Projects</li>
+                <li style={{ fontWeight: 'bold' }}>Experience</li>
+                <li style={{ fontWeight: 'bold' }}>Skills</li>
+                <li style={{ fontWeight: 'bold' }}>Contact</li>
               </ul>
             </div>
             <div className="footer-column">
-              <h5 className="font-medium mb-2">Links</h5>
+              <h5 className="font-medium mb-2" style={{ fontWeight: 'bold' }}>Links</h5>
               <ul>
                 <li>
-                  <a href="#" className="hover:underline">GitHub</a>
+                  <a href="#" className="hover:underline" style={{ fontWeight: 'bold' }}>GitHub</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">LinkedIn</a>
+                  <a href="#" className="hover:underline" style={{ fontWeight: 'bold' }}>LinkedIn</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">Resume PDF</a>
+                  <a href="#" className="hover:underline" style={{ fontWeight: 'bold' }}>Resume PDF</a>
                 </li>
               </ul>
             </div>
             <div className="footer-column">
-              <h5 className="font-medium mb-2">Contact</h5>
+              <h5 className="font-medium mb-2" style={{ fontWeight: 'bold' }}>Contact</h5>
               <ul>
-                <li>tjsubaric@gmail.com</li>
-                <li>+1(847)271-0993</li>
-                <li>Carpentersville, IL</li>
+                <li style={{ fontWeight: 'bold' }}>tjsubaric@gmail.com</li>
+                <li style={{ fontWeight: 'bold' }}>+1(847)271-0993</li>
+                <li style={{ fontWeight: 'bold' }}>Carpentersville, IL</li>
               </ul>
             </div>
           </div>
