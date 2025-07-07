@@ -114,7 +114,6 @@ function App() {
           style={{
             minHeight: '80vh',
             paddingTop: 20,
-            paddingBottom: 0,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -181,9 +180,9 @@ function App() {
               paddingTop: '130px', // Add more padding to the top
             }}>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>About</h2>
-              <h3 style={{ fontSize: '2rem', marginBottom: '20px' }}>Software Engineer</h3>
-              <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
-                Hi, I’m Tommy Subaric, a passionate Software Automation Engineer. I work with everything from C#, Python, JavaScript and beyond, enabling me to build scalable applications across various platforms. Whether it’s cloud environments like AWS and Azure, or frameworks such as React, and .NET, I specialize in crafting high-performance, reliable solutions. I also apply AI and machine learning to real-world problems, creating automated systems that drive efficiency and innovation. I have experience in CI/CD pipelines, Microsoft Power Platform, SAP integrations, and IT Consulting to enhance system performance. My expertise covers backend architecture, database management (SQL, MongoDB, Redis), and front-end development, giving me a well-rounded approach to building software. Beyond my technical expertise, I bring strong problem-solving skills, adaptability, and a drive for continuous improvement.
+              <h3 style={{ fontSize: '2rem', marginBottom: '20px' }}>Software Automation Engineer</h3>
+              <p style={{ fontSize: '1.2rem', lineHeight: '1.8', fontWeight: 'bold' }}>
+                Hi, I’m Tommy Subaric, a passionate Software Automation Engineer. I program with everything from C#, Python, JavaScript and beyond, enabling me to build scalable applications across various platforms. Whether it’s cloud environments like AWS and Azure, or frameworks such as React, and .NET, I specialize in crafting high-performance, reliable solutions. I also apply AI and machine learning to real-world problems, creating automated systems that drive efficiency and innovation. I have experience in CI/CD pipelines, Microsoft Power Platform, SAP integrations, and IT Consulting to enhance system performance. My expertise covers backend architecture, database management (SQL, MongoDB, Redis), and front-end development, giving me a well-rounded approach to building software. Beyond my technical expertise, I bring strong problem-solving skills, adaptability, and a drive for continuous improvement.
               </p>
             </div>
             <div style={{
@@ -191,17 +190,12 @@ function App() {
               display: 'flex',
               justifyContent: 'center', // Center the image horizontally
               alignItems: 'center', // Center the image vertically
+              paddingTop: '70px', // Add padding to align with text
             }}>
               <img
                 src={portrait}
                 alt="Profile"
                 className="about-profile-pic"
-                style={{
-                  maxHeight: '400px', // Double the height of the image
-                  maxWidth: '400px', // Double the width of the image
-                  borderRadius: '50%', // Keep the image circular
-                  objectFit: 'cover', // Ensure the image fits within the circular shape
-                }}
               />
             </div>
           </div>
