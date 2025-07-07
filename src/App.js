@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import portrait from './images/Arthur Morgan.jpeg';
+import portrait from './images/stacked-waves-haikei.svg';
 import './App.css';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -113,7 +113,8 @@ function App() {
           className="section-home"
           style={{
             minHeight: '80vh',
-            paddingBottom: 40,
+            paddingTop: 20,
+            paddingBottom: 0,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -172,11 +173,12 @@ function App() {
             justifyContent: 'space-between',
             maxWidth: '95%', // Use more screen width
             margin: '0 auto',
-            gap: '40px', // Add spacing between text and image
+            gap: '0px', // Add spacing between text and image
           }}>
             <div className="text-section" style={{
               flex: 4, // Increase space for the text section
-              padding: '20px', // Add padding for better spacing
+              padding: '40px', // Add padding for better spacing
+              paddingTop: '130px', // Add more padding to the top
             }}>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>About</h2>
               <h3 style={{ fontSize: '2rem', marginBottom: '20px' }}>Software Engineer</h3>
@@ -185,7 +187,7 @@ function App() {
               </p>
             </div>
             <div style={{
-              flex: 1, // Keep the image section smaller
+              flex: 2, // Keep the image section smaller
               display: 'flex',
               justifyContent: 'center', // Center the image horizontally
               alignItems: 'center', // Center the image vertically
@@ -195,7 +197,8 @@ function App() {
                 alt="Profile"
                 className="about-profile-pic"
                 style={{
-                  maxHeight: '600px', // Keep the image size
+                  maxHeight: '400px', // Double the height of the image
+                  maxWidth: '400px', // Double the width of the image
                   borderRadius: '50%', // Keep the image circular
                   objectFit: 'cover', // Ensure the image fits within the circular shape
                 }}

@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: url('./stacked-waves-haikei.svg') no-repeat center center fixed;
+  background: url('images/stacked-waves-haikei.svg') no-repeat center center fixed;
   background-size: cover;
 }
 
