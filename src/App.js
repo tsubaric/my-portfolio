@@ -69,11 +69,6 @@ function App() {
       description: "A brief description of Project 8.",
       image: "src/project8.jpeg",
     },
-    {
-      title: "Event Register Application",
-      description: "A brief description of Project 8.",
-      image: "src/project8.jpeg",
-    },
   ];
 
   return (
@@ -144,13 +139,7 @@ function App() {
                 <GitHubIcon style={{ fontSize: 40, color: '#222' }} />
               </a>
               {/* Resume Doc Icon */}
-              <a
-                href="/resume.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Resume"
-                style={{ display: 'inline-block', marginLeft: 8, verticalAlign: 'middle' }}
-              >
+              <a href="/resume.html" aria-label="Resume" style={{ display: 'inline-block', marginLeft: 8, verticalAlign: 'middle' }}>
                 <DescriptionIcon style={{
                   fontSize: 40, // Match other icons
                   color: '#2e3a59',
@@ -221,16 +210,16 @@ function App() {
                   image={project.image}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
+                  <Typography gutterBottom variant="h5" component="div" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>
                     {project.title}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>
                     {project.description}
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Share</Button>
-                  <Button size="small">Learn More</Button>
+                  <Button size="small" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>Share</Button>
+                  <Button size="small" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>Learn More</Button>
                 </CardActions>
               </Card>
             ))}
