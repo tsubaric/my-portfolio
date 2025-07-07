@@ -178,7 +178,7 @@ function App() {
             <div className="text-section" style={{
               flex: 4, // Increase space for the text section
               padding: '40px', // Add padding for better spacing
-              paddingTop: '160px', // Add more padding to the top
+              paddingTop: '140px', // Add more padding to the top
             }}>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>About</h2>
               <h3 style={{ fontSize: '2rem', marginBottom: '20px' }}>Software Automation Engineer</h3>
@@ -191,7 +191,7 @@ function App() {
               display: 'flex',
               justifyContent: 'center', // Center the image horizontally
               alignItems: 'center', // Center the image vertically
-              paddingTop: '130px', // Add padding to align with text
+              paddingTop: '140px', // Add padding to align with text
             }}>
               <img
                 src={portrait}
