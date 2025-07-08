@@ -140,15 +140,15 @@ function App() {
               </a>
               {/* Resume Doc Icon */}
               <a href="/resume.html" aria-label="Resume" style={{ display: 'inline-block', marginLeft: 8, verticalAlign: 'middle' }}>
-                <DescriptionIcon style={{
-                  fontSize: 40, // Match other icons
-                  color: '#2e3a59',
-                  // Removed background, border, borderRadius, boxShadow, and padding
-                  transition: 'transform 0.2s',
-                  cursor: 'pointer'
-                }}
-                onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.08)')}
-                onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')}
+                <DescriptionIcon
+                  style={{
+                    fontSize: 40,
+                    color: '#2e3a59',
+                    transition: 'transform 0.2s',
+                    cursor: 'pointer'
+                  }}
+                  onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.08)')}
+                  onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')}
                 />
               </a>
             </div>
@@ -254,13 +254,13 @@ function App() {
               <h5 className="font-medium mb-2" style={{ fontWeight: 'bold' }}>Links</h5>
               <ul>
                 <li>
-                  <a href="#" className="hover:underline" style={{ fontWeight: 'bold' }}>GitHub</a>
+                  <a href="https://www.linkedin.com/in/thomas-subaric/" className="hover:underline" style={{ fontWeight: 'bold' }}>LinkedIn</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline" style={{ fontWeight: 'bold' }}>LinkedIn</a>
+                  <a href="https://github.com/tsubaric" className="hover:underline" style={{ fontWeight: 'bold' }}>GitHub</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline" style={{ fontWeight: 'bold' }}>Resume PDF</a>
+                  <a href="/resume.html" className="hover:underline" style={{ fontWeight: 'bold' }}>Resume PDF</a>
                 </li>
               </ul>
             </div>
