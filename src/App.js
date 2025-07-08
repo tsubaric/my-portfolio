@@ -15,6 +15,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import projects from './projects.json';
 
 function App() {
   // Create refs for each section
@@ -27,49 +28,6 @@ function App() {
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
-
-  const projects = [
-    {
-      title: "NFTicket",
-      description: "A brief description of Project 1.",
-      image: "src/project1.jpeg", // Replace with actual image paths
-    },
-    {
-      title: "Doctor and Patient Healthcare Portal",
-      description: "A brief description of Project 2.",
-      image: "src/project2.jpeg",
-    },
-    {
-      title: "SeekerPro",
-      description: "A brief description of Project 3.",
-      image: "src/project3.jpeg",
-    },
-    {
-      title: "Pong Game",
-      description: "A brief description of Project 4.",
-      image: "src/project4.jpeg",
-    },
-    {
-      title: "X Social Account Recommendations and Similarities",
-      description: "A brief description of Project 5.",
-      image: "src/project5.jpeg",
-    },
-    {
-      title: "Asteroids Game",
-      description: "A brief description of Project 6.",
-      image: "src/project6.jpeg",
-    },
-    {
-      title: "Theory of Computation",
-      description: "A brief description of Project 7.",
-      image: "src/project7.jpeg",
-    },
-    {
-      title: "Wordle",
-      description: "A brief description of Project 8.",
-      image: "src/project8.jpeg",
-    },
-  ];
 
   return (
     <div className="App">
