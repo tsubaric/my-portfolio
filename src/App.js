@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import portrait from './images/stacked-waves-haikei.svg';
+import portrait from './images/Arthur Morgan.jpeg';
 import './App.css';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -15,6 +15,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import projects from './projects.json';
 
 function App() {
   // Create refs for each section
@@ -27,49 +28,6 @@ function App() {
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
-
-  const projects = [
-    {
-      title: "NFTicket",
-      description: "A brief description of Project 1.",
-      image: "src/project1.jpeg", // Replace with actual image paths
-    },
-    {
-      title: "Doctor and Patient Healthcare Portal",
-      description: "A brief description of Project 2.",
-      image: "src/project2.jpeg",
-    },
-    {
-      title: "SeekerPro",
-      description: "A brief description of Project 3.",
-      image: "src/project3.jpeg",
-    },
-    {
-      title: "Pong Game",
-      description: "A brief description of Project 4.",
-      image: "src/project4.jpeg",
-    },
-    {
-      title: "X Social Account Recommendations and Similarities",
-      description: "A brief description of Project 5.",
-      image: "src/project5.jpeg",
-    },
-    {
-      title: "Asteroids Game",
-      description: "A brief description of Project 6.",
-      image: "src/project6.jpeg",
-    },
-    {
-      title: "Theory of Computation",
-      description: "A brief description of Project 7.",
-      image: "src/project7.jpeg",
-    },
-    {
-      title: "Wordle",
-      description: "A brief description of Project 8.",
-      image: "src/project8.jpeg",
-    },
-  ];
 
   return (
     <div className="App">
@@ -140,15 +98,15 @@ function App() {
               </a>
               {/* Resume Doc Icon */}
               <a href="/resume.html" aria-label="Resume" style={{ display: 'inline-block', marginLeft: 8, verticalAlign: 'middle' }}>
-                <DescriptionIcon style={{
-                  fontSize: 40, // Match other icons
-                  color: '#2e3a59',
-                  // Removed background, border, borderRadius, boxShadow, and padding
-                  transition: 'transform 0.2s',
-                  cursor: 'pointer'
-                }}
-                onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.08)')}
-                onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')}
+                <DescriptionIcon
+                  style={{
+                    fontSize: 40,
+                    color: '#2e3a59',
+                    transition: 'transform 0.2s',
+                    cursor: 'pointer'
+                  }}
+                  onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.08)')}
+                  onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')}
                 />
               </a>
             </div>
@@ -254,13 +212,13 @@ function App() {
               <h5 className="font-medium mb-2" style={{ fontWeight: 'bold' }}>Links</h5>
               <ul>
                 <li>
-                  <a href="#" className="hover:underline" style={{ fontWeight: 'bold' }}>GitHub</a>
+                  <a href="https://www.linkedin.com/in/thomas-subaric/" className="hover:underline" style={{ fontWeight: 'bold' }}>LinkedIn</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline" style={{ fontWeight: 'bold' }}>LinkedIn</a>
+                  <a href="https://github.com/tsubaric" className="hover:underline" style={{ fontWeight: 'bold' }}>GitHub</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline" style={{ fontWeight: 'bold' }}>Resume PDF</a>
+                  <a href="/resume.html" className="hover:underline" style={{ fontWeight: 'bold' }}>Resume PDF</a>
                 </li>
               </ul>
             </div>
