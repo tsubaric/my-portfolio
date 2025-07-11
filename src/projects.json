@@ -66,14 +66,15 @@
   },
   {
     "title": "Asteroids Game",
-    "description": "A brief description of Project 6.",
+    "description": "Added features to Asteroids using topics including: OOP, dynamic memory allocation, SFML library, composition, inheritance, and polymorphism.",
     "image": "src/project6.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Computers in Engineering" } ],
     "skills": [
-      { "label": "Demo" },
-      { "label": "Docs" },
-      { "label": "Video" }
+      { "label": "C++" },
+      { "label": "Cmake" },
+      { "label": "Computer Graphics" },
+      { "label": "SFML" }
     ]
   },
   {
