@@ -91,7 +91,7 @@
   },
   {
     "title": "Wordle",
-    "description": "A brief description of Project 8.",
+    "description": "Remake of the NYT Classic, a word-guessing game where players have six attempts to guess a five-letter word. Each guess must be a valid five-letter word. The color of a tile will change to show how close the guess was. If the tile turns green, the letter is in the word and in the correct spot. If it turns yellow, the letter is in the word but not in the correct spot.",
     "image": "src/project8.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Software Design" } ],
