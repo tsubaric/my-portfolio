@@ -189,7 +189,7 @@ function App() {
                       className="source-btn"
                     >
                       <span>
-                        <LinkIcon style={{ fontSize: 18, marginRight: 4, color: "#3ec6b8" }} />
+                        <LinkIcon style={{ fontSize: 18, marginRight: 4, color: "#f79000" }} />
                         Source
                       </span>
                     </a>
