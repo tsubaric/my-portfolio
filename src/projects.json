@@ -2,41 +2,97 @@
   {
     "title": "NFTicket",
     "description": "A brief description of NFTicket.",
-    "image": "src/project1.jpeg"
+    "image": "src/project1.jpeg",
+    "source": "https://github.com/tsubaric",
+    "class": [ { "label": "Senior Design" } ],
+    "skills": [
+      { "label": "Test" },
+      { "label": "Docs" },
+      { "label": "Video" }
+    ]
   },
   {
     "title": "Doctor and Patient Healthcare Portal",
     "description": "A brief description of Project 2.",
-    "image": "src/project2.jpeg"
+    "image": "src/project2.jpeg",
+    "source": "https://github.com/tsubaric",
+    "class": [ { "label": "Software Engineering" } ],
+    "skills": [
+      { "label": "Demo" },
+      { "label": "Docs" },
+      { "label": "Video" }
+    ]
   },
   {
     "title": "SeekerPro",
     "description": "A brief description of Project 3.",
-    "image": "src/project3.jpeg"
+    "image": "src/project3.jpeg",
+    "source": "https://github.com/tsubaric",
+    "class": [ { "label": "Internet of Things" } ],
+    "skills": [
+      { "label": "Demo" },
+      { "label": "Docs" },
+      { "label": "Video" }
+    ]
   },
   {
     "title": "Pong Game",
     "description": "A brief description of Project 4.",
-    "image": "src/project4.jpeg"
+    "image": "src/project4.jpeg",
+    "source": "https://github.com/tsubaric",
+    "class": [ { "label": "Embedded Systems" } ],
+    "skills": [
+      { "label": "Demo" },
+      { "label": "Docs" },
+      { "label": "Video" }
+    ]
   },
   {
     "title": "X Social Account Recommendations and Similarities",
     "description": "A brief description of Project 5.",
-    "image": "src/project5.jpeg"
+    "image": "src/project5.jpeg",
+    "source": "https://github.com/tsubaric",
+    "class": [ { "label": "Modern Databases" } ],
+    "skills": [
+      { "label": "Demo" },
+      { "label": "Docs" },
+      { "label": "Video" }
+    ]
   },
   {
     "title": "Asteroids Game",
     "description": "A brief description of Project 6.",
-    "image": "src/project6.jpeg"
+    "image": "src/project6.jpeg",
+    "source": "https://github.com/tsubaric",
+    "class": [ { "label": "Computers in Engineering" } ],
+    "skills": [
+      { "label": "Demo" },
+      { "label": "Docs" },
+      { "label": "Video" }
+    ]
   },
   {
     "title": "Theory of Computation",
     "description": "A brief description of Project 7.",
-    "image": "src/project7.jpeg"
+    "image": "src/project7.jpeg",
+    "source": "https://github.com/tsubaric",
+    "class": [ { "label": "Theory of Computation" } ],
+    "skills": [
+      { "label": "Demo" },
+      { "label": "Docs" },
+      { "label": "Video" }
+    ]
   },
   {
     "title": "Wordle",
     "description": "A brief description of Project 8.",
-    "image": "src/project8.jpeg"
+    "image": "src/project8.jpeg",
+    "source": "https://github.com/tsubaric",
+    "class": [ { "label": "Software Design" } ],
+    "skills": [
+      { "label": "Demo" },
+      { "label": "Docs" },
+      { "label": "Video" }
+    ]
   }
 ]

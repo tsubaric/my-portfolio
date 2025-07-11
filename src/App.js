@@ -13,9 +13,9 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import projects from './projects.json';
+import LinkIcon from '@mui/icons-material/Link';
 
 function App() {
   // Create refs for each section
@@ -155,11 +155,11 @@ function App() {
             {projects.map((project, index) => (
               <Card key={index} className="portfolio-card" sx={{
                 maxWidth: 345,
-                backgroundColor: '#3b4a6b', // Slightly lighter blue-gray background
-                border: '2px solid #fff', // White outline
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Subtle shadow
-                borderRadius: '8px', // Rounded corners
-                padding: '20px', // Internal padding
+                backgroundColor: '#3b4a6b',
+                border: '2px solid #fff',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                borderRadius: '8px',
+                padding: '20px',
               }}>
                 <CardMedia
                   component="img"
@@ -168,16 +168,138 @@ function App() {
                   image={project.image}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    style={{
+                      fontFamily: 'Courier New, monospace',
+                      color: '#fff',
+                      fontWeight: 'bold',
+                    }}
+                  >
                     {project.title}
                   </Typography>
-                  <Typography variant="body2" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>
+                  {/* Source Code Button: Outlined oval, smaller, with link icon */}
+                  {project.source && (
+                    <a
+                      href={project.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="source-btn"
+                    >
+                      <span>
+                        <LinkIcon style={{ fontSize: 18, marginRight: 4, color: "#3ec6b8" }} />
+                        Source
+                      </span>
+                    </a>
+                  )}
+                  <Typography
+                    variant="body2"
+                    style={{
+                      fontFamily: 'Courier New, monospace',
+                      color: '#fff',
+                      fontWeight: 'bold',
+                    }}
+                  >
                     {project.description}
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size="small" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>Share</Button>
-                  <Button size="small" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>Learn More</Button>
+                <CardActions sx={{ justifyContent: 'center', gap: 2 }}>
+                  {/* Unified Class and Skills Section */}
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexWrap: 'wrap',
+                      gap: '8px',
+                      marginLeft: 8,
+                      justifyContent: 'center',
+                      width: '100%',
+                    }}
+                  >
+                    {/* Dynamic Class oval (always 1 if present) */}
+                    {Array.isArray(project.class) && project.class.length > 0 && (
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          borderRadius: '999px',
+                          background: 'transparent',
+                          minWidth: 80,
+                          height: 32,
+                          border: '2px solid #3ec6b8',
+                          padding: '0 14px',
+                          margin: 0,
+                        }}
+                      >
+                        <span style={{
+                          color: '#3ec6b8',
+                          fontWeight: 'bold',
+                          fontFamily: 'Courier New, monospace',
+                          fontSize: '0.95rem',
+                          whiteSpace: 'nowrap'
+                        }}>
+                          {project.class[0].label || 'Class'}
+                        </span>
+                      </div>
+                    )}
+                    {/* Dynamic Skills ovals */}
+                    {Array.isArray(project.skills) && project.skills.length > 0
+                      ? project.skills.slice(0, 7).map((item, idx) => (
+                          <div
+                            key={idx}
+                            style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              borderRadius: '999px',
+                              background: 'transparent',
+                              minWidth: 80,
+                              height: 32,
+                              border: '2px solid #fff',
+                              padding: '0 14px',
+                              margin: 0,
+                            }}
+                          >
+                            <span style={{
+                              color: '#fff',
+                              fontWeight: 'bold',
+                              fontFamily: 'Courier New, monospace',
+                              fontSize: '0.95rem',
+                              whiteSpace: 'nowrap'
+                            }}>
+                              {item.label || 'Skill'}
+                            </span>
+                          </div>
+                        ))
+                      : (
+                        <div
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: '999px',
+                            background: 'transparent',
+                            minWidth: 80,
+                            height: 32,
+                            border: '2px solid #fff',
+                            padding: '0 14px',
+                            margin: 0,
+                          }}
+                        >
+                          <span style={{
+                            color: '#fff',
+                            fontWeight: 'bold',
+                            fontFamily: 'Courier New, monospace',
+                            fontSize: '0.95rem'
+                          }}>
+                            Skills
+                          </span>
+                        </div>
+                      )
+                    }
+                  </div>
                 </CardActions>
               </Card>
             ))}
