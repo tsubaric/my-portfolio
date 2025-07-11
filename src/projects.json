@@ -16,7 +16,7 @@
     "description": "A brief description of Project 2.",
     "image": "src/project2.jpeg",
     "source": "https://github.com/tsubaric",
-    "class": [ { "label": "Senior Design" } ],
+    "class": [ { "label": "Software Engineering" } ],
     "skills": [
       { "label": "Demo" },
       { "label": "Docs" },
@@ -28,7 +28,7 @@
     "description": "A brief description of Project 3.",
     "image": "src/project3.jpeg",
     "source": "https://github.com/tsubaric",
-    "class": [ { "label": "Senior Design" } ],
+    "class": [ { "label": "Internet of Things" } ],
     "skills": [
       { "label": "Demo" },
       { "label": "Docs" },
@@ -40,7 +40,7 @@
     "description": "A brief description of Project 4.",
     "image": "src/project4.jpeg",
     "source": "https://github.com/tsubaric",
-    "class": [ { "label": "Senior Design" } ],
+    "class": [ { "label": "Embedded Systems" } ],
     "skills": [
       { "label": "Demo" },
       { "label": "Docs" },
@@ -52,7 +52,7 @@
     "description": "A brief description of Project 5.",
     "image": "src/project5.jpeg",
     "source": "https://github.com/tsubaric",
-    "class": [ { "label": "Senior Design" } ],
+    "class": [ { "label": "Modern Databases" } ],
     "skills": [
       { "label": "Demo" },
       { "label": "Docs" },
@@ -64,7 +64,7 @@
     "description": "A brief description of Project 6.",
     "image": "src/project6.jpeg",
     "source": "https://github.com/tsubaric",
-    "class": [ { "label": "Senior Design" } ],
+    "class": [ { "label": "Computers in Engineering" } ],
     "skills": [
       { "label": "Demo" },
       { "label": "Docs" },
@@ -76,7 +76,7 @@
     "description": "A brief description of Project 7.",
     "image": "src/project7.jpeg",
     "source": "https://github.com/tsubaric",
-    "class": [ { "label": "Senior Design" } ],
+    "class": [ { "label": "Theory of Computation" } ],
     "skills": [
       { "label": "Demo" },
       { "label": "Docs" },
@@ -88,7 +88,7 @@
     "description": "A brief description of Project 8.",
     "image": "src/project8.jpeg",
     "source": "https://github.com/tsubaric",
-    "class": [ { "label": "Senior Design" } ],
+    "class": [ { "label": "Software Design" } ],
     "skills": [
       { "label": "Demo" },
       { "label": "Docs" },
