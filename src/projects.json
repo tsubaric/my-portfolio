@@ -1,26 +1,31 @@
 [
   {
     "title": "NFTicket",
-    "description": "A brief description of NFTicket.",
+    "description": "NFTicket is a platform to browse, create, buy, and sell event tickets as NFTs using blockchain. It integrates Metamask for secure crypto payments and offers digital memorabilia, modernizing and preserving the event experience. This innovative approach adds value by uniquely commemorating users' event experiences in a digital format.",
     "image": "src/project1.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Senior Design" } ],
     "skills": [
-      { "label": "Test" },
-      { "label": "Docs" },
-      { "label": "Video" }
+      { "label": "Node.js" },
+      { "label": "React" },
+      { "label": "Firebase" },
+      { "label": "Blockchain" },
+      { "label": "Metamask" },
+      { "label": "NFTs" }
     ]
   },
   {
     "title": "Doctor and Patient Healthcare Portal",
-    "description": "A brief description of Project 2.",
+    "description": "Developed a web server using Java Spring Boot and HTML for a full-stack application facilitating patient appointments with doctors/nurses connected to MySQL Server with Workbench. Implemented secure registration and login functionalities for admins, patients, and employees. Utilized Spring Boot dependencies including JPA Queries, Web, Security, and Thymeleaf for frontend. Established an admin CRUD board for user maintenance.",
     "image": "src/project2.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Software Engineering" } ],
     "skills": [
-      { "label": "Demo" },
-      { "label": "Docs" },
-      { "label": "Video" }
+      { "label": "Java" },
+      { "label": "Spring Boot" },
+      { "label": "MySQL Server" },
+      { "label": "JPA Queries" },
+      { "label": "Thymeleaf HTML" }
     ]
   },
   {
