@@ -2,7 +2,7 @@
   {
     "title": "NFTicket",
     "description": "NFTicket is a platform to browse, create, buy, and sell event tickets as NFTs using blockchain. It integrates Metamask for secure crypto payments and offers digital memorabilia, modernizing and preserving the event experience. This innovative approach adds value by uniquely commemorating users' event experiences in a digital format.",
-    "image": "src/project1.jpeg",
+    "image": "src/images/USAFlag.png",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Senior Design" } ],
     "skills": [
@@ -16,7 +16,7 @@
   },
   {
     "title": "Doctor & Patient Healthcare Portal",
-    "description": "Developed a full-stack application facilitating patient appointments with doctors/nurses connected to MySQL. Implemented secure registration and login functionalities for admins, patients, and employees. Utilized Spring Boot dependencies including JPA Queries, Web, Security, and Thymeleaf for frontend. Established an admin CRUD board for user maintenance.",
+    "description": "Developed a full-stack application facilitating patient appointments with doctors/nurses connected to MySQL. Implemented secure registration and login functionalities for admins, patients, and employees. Established an admin CRUD board for user maintenance.",
     "image": "src/project2.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Software Engineering" } ],
