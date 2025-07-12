@@ -127,10 +127,9 @@ function App() {
               padding: '40px', // Add padding for better spacing
               paddingTop: '140px', // Add more padding to the top
             }}>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>About</h2>
-              <h3 style={{ fontSize: '2rem', marginBottom: '20px' }}>Software Automation Engineer</h3>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>About Me</h2>
               <p style={{ fontSize: '1.2rem', lineHeight: '1.8', fontWeight: 'bold' }}>
-                Hi, I’m Tommy Subaric, a passionate Software Automation Engineer. I program with everything from C#, Python, JavaScript and beyond, enabling me to build scalable applications across various platforms. Whether it’s cloud environments like AWS and Azure, or frameworks such as React, and .NET, I specialize in crafting high-performance, reliable solutions. I also apply AI and machine learning to real-world problems, creating automated systems that drive efficiency and innovation. I have experience in CI/CD pipelines, Microsoft Power Platform, SAP integrations, and IT Consulting to enhance system performance. My expertise covers backend architecture, database management (SQL, MongoDB, Redis), and front-end development, giving me a well-rounded approach to building software. Beyond my technical expertise, I bring strong problem-solving skills, adaptability, and a drive for continuous improvement.
+               A passionate Software Automation Engineer focused on building scalable, high-performance solutions across diverse platforms. I work fluently with C#, Python, Java, JavaScript, and more, enabling cross-platform development from backend services to front-end interfaces. My experience spans cloud platforms like AWS and Azure, along with frameworks such as .NET and React. I specialize in automation, AI, and machine learning — designing intelligent systems that streamline operations and solve complex real-world challenges. My background includes architecting CI/CD pipelines, integrating with SAP, and leveraging Microsoft Power Platform for enterprise solutions. With a strong grasp of backend architecture, database technologies (SQL, MongoDB, Redis), and frontend development, I bring a full-stack perspective to every project. I’m also experienced in IT consulting, helping organizations enhance performance and adopt modern, efficient systems. At the core, I’m a problem solver with a mindset of continuous improvement — adaptable, analytical, and always looking to drive innovation.
               </p>
             </div>
             <div style={{
@@ -319,7 +318,7 @@ function App() {
           }}>
             <div className="footer-column">
               <h4 className="text-lg font-semibold mb-4" style={{ fontWeight: 'bold' }}>Tommy Subaric</h4>
-              <p className="text-sm" style={{ fontWeight: 'bold' }}>AI and Automation Engineer</p>
+              <p className="text-sm" style={{ fontWeight: 'bold' }}>Software Automation Engineer</p>
             </div>
             <div className="footer-column">
               <h5 className="font-medium mb-2" style={{ fontWeight: 'bold' }}>Portfolio</h5>

@@ -1,26 +1,31 @@
 [
   {
     "title": "NFTicket",
-    "description": "A brief description of NFTicket.",
+    "description": "NFTicket is a platform to browse, create, buy, and sell event tickets as NFTs using blockchain. It integrates Metamask for secure crypto payments and offers digital memorabilia, modernizing and preserving the event experience. This innovative approach adds value by uniquely commemorating users' event experiences in a digital format.",
     "image": "src/project1.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Senior Design" } ],
     "skills": [
-      { "label": "Test" },
-      { "label": "Docs" },
-      { "label": "Video" }
+      { "label": "Node.js" },
+      { "label": "React" },
+      { "label": "Firebase" },
+      { "label": "Blockchain" },
+      { "label": "Metamask" },
+      { "label": "NFTs" }
     ]
   },
   {
-    "title": "Doctor and Patient Healthcare Portal",
-    "description": "A brief description of Project 2.",
+    "title": "Doctor & Patient Healthcare Portal",
+    "description": "Developed a full-stack application facilitating patient appointments with doctors/nurses connected to MySQL. Implemented secure registration and login functionalities for admins, patients, and employees. Utilized Spring Boot dependencies including JPA Queries, Web, Security, and Thymeleaf for frontend. Established an admin CRUD board for user maintenance.",
     "image": "src/project2.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Software Engineering" } ],
     "skills": [
-      { "label": "Demo" },
-      { "label": "Docs" },
-      { "label": "Video" }
+      { "label": "Java" },
+      { "label": "Spring Boot" },
+      { "label": "MySQL Server" },
+      { "label": "JPA Queries" },
+      { "label": "Thymeleaf HTML" }
     ]
   },
   {
@@ -61,14 +66,15 @@
   },
   {
     "title": "Asteroids Game",
-    "description": "A brief description of Project 6.",
+    "description": "Added features to Asteroids using topics including: OOP, dynamic memory allocation, SFML library, composition, inheritance, and polymorphism.",
     "image": "src/project6.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Computers in Engineering" } ],
     "skills": [
-      { "label": "Demo" },
-      { "label": "Docs" },
-      { "label": "Video" }
+      { "label": "C++" },
+      { "label": "Cmake" },
+      { "label": "Computer Graphics" },
+      { "label": "SFML" }
     ]
   },
   {
@@ -85,7 +91,7 @@
   },
   {
     "title": "Wordle",
-    "description": "A brief description of Project 8.",
+    "description": "Remake of the NYT Classic, a word-guessing game where players have six attempts to guess a five-letter word. Each guess must be a valid five-letter word. The color of a tile will change to show how close the guess was. If the tile turns green, the letter is in the word and in the correct spot. If it turns yellow, the letter is in the word but not in the correct spot.",
     "image": "src/project8.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Software Design" } ],
