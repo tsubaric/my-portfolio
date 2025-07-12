@@ -228,13 +228,13 @@ function App() {
                           background: 'transparent',
                           minWidth: 80,
                           height: 32,
-                          border: '2px solid #3ec6b8',
+                          border: '2px solid #ffa900',
                           padding: '0 14px',
                           margin: 0,
                         }}
                       >
                         <span style={{
-                          color: '#3ec6b8',
+                          color: '#ffa900',
                           fontWeight: 'bold',
                           fontFamily: 'Courier New, monospace',
                           fontSize: '0.95rem',
