@@ -30,14 +30,16 @@
   },
   {
     "title": "SeekerPro",
-    "description": "A brief description of Project 3.",
+    "description": "Engineered a global GPS tracker using a Raspberry Pi 3 and Neo 6M GPS module, integrated with a React Native Maps app. Utilized Google Cloud Web API for device connectivity and notifications. Collaborated in rotating teams to solve GPS integration challenges, inspired by Apple’s AirTag.",
     "image": "src/project3.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Internet of Things" } ],
     "skills": [
-      { "label": "Demo" },
-      { "label": "Docs" },
-      { "label": "Video" }
+      { "label": "React Native" },
+      { "label": "Raspberry Pi " },
+      { "label": "Google Cloud API" },
+      { "label": "GPS Module" },
+      { "label": "Node.js" }
     ]
   },
   {
@@ -54,14 +56,19 @@
   },
   {
     "title": "X Social Account Recommendations and Similarities",
-    "description": "A brief description of Project 5.",
+    "description": "A social graph analysis project that recommends similar Twitter users based on their connections. Built using Flask, Redis, and Neo4j, with data sourced from a Twitter friendship dataset. Includes a similarity engine powered by Neo4j Graph Data Science algorithms.",
     "image": "src/project5.jpeg",
     "source": "https://github.com/tsubaric",
-    "class": [ { "label": "Modern Databases" } ],
+    "class": [
+      { "label": "Modern Databases" }
+    ],
     "skills": [
-      { "label": "Demo" },
-      { "label": "Docs" },
-      { "label": "Video" }
+      { "label": "Python" },
+      { "label": "Flask" },
+      { "label": "Neo4j" },
+      { "label": "Redis" },
+      { "label": "Social Graphs" },
+      { "label": "Data Integration" }
     ]
   },
   {
@@ -93,6 +100,18 @@
     "title": "Wordle",
     "description": "Remake of the NYT Classic, a word-guessing game where players have six attempts to guess a five-letter word. Each guess must be a valid five-letter word. The color of a tile will change to show how close the guess was. If the tile turns green, the letter is in the word and in the correct spot. If it turns yellow, the letter is in the word but not in the correct spot.",
     "image": "src/project8.jpeg",
+    "source": "https://github.com/tsubaric",
+    "class": [ { "label": "Software Design" } ],
+    "skills": [
+      { "label": "Demo" },
+      { "label": "Docs" },
+      { "label": "Video" }
+    ]
+  },
+  {
+    "title": "Amazon Shipping Simulation",
+    "description": "A brief description of Project 9.",
+    "image": "src/project9.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [ { "label": "Software Design" } ],
     "skills": [
