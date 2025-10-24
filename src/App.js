@@ -23,11 +23,44 @@ function App() {
   const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
   const contactRef = useRef(null);
+  const experienceRef = useRef(null);
 
   // Scroll to section helper
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  // Example experience entries
+  const experiences = [
+    {
+      title: "Senior Automation Engineer",
+      company: "Acme Corp",
+      period: "2022 — Present",
+      description: "Built automation pipelines, improved CI/CD reliability and implemented ML-driven testing.",
+      image: "" // optional
+    },
+    {
+      title: "Software Engineer",
+      company: "Tech Solutions",
+      period: "2019 — 2022",
+      description: "Developed backend services, integrations with SAP, and cloud migrations.",
+      image: ""
+    },
+    {
+      title: "DevOps Engineer",
+      company: "CloudWorks",
+      period: "2017 — 2019",
+      description: "Architected CI/CD pipelines and monitored platform reliability.",
+      image: ""
+    },
+    {
+      title: "Consultant",
+      company: "IT Consulting LLC",
+      period: "2015 — 2017",
+      description: "Delivered enterprise solutions and Power Platform integrations.",
+      image: ""
+    },
+  ];
 
   return (
     <div className="App">
@@ -50,6 +83,10 @@ function App() {
           <div onClick={() => scrollToSection(aboutRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
             <IconButton aria-label="about me" size="small"><PersonIcon /></IconButton>
             <span>About</span>
+          </div>
+          <div onClick={() => scrollToSection(experienceRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <IconButton aria-label="experience" size="small"><WorkIcon /></IconButton>
+            <span>Experience</span>
           </div>
           <div onClick={() => scrollToSection(portfolioRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
             <IconButton aria-label="portfolio" size="small"><WorkIcon /></IconButton>
@@ -145,6 +182,37 @@ function App() {
                 className="about-profile-pic"
               />
             </div>
+          </div>
+        </section>
+        <hr className="section-divider" />
+        <section ref={experienceRef} className="section-experience" style={{ minHeight: '80vh', paddingTop: '130px', paddingBottom: 40 }}>
+          <h2>Experience</h2>
+          <div className="portfolio-grid">
+            {experiences.map((exp, idx) => (
+              <Card key={idx} className="portfolio-card" sx={{
+                maxWidth: 345,
+                backgroundColor: '#3b4a6b',
+                border: '2px solid #fff',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                borderRadius: '8px',
+                padding: '20px',
+              }}>
+                {exp.image && (
+                  <CardMedia component="img" alt={exp.title} height="140" image={exp.image} />
+                )}
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>
+                    {exp.title}
+                  </Typography>
+                  <Typography variant="subtitle2" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>
+                    {exp.company} • {exp.period}
+                  </Typography>
+                  <Typography variant="body2" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold', marginTop: 8 }}>
+                    {exp.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
         <hr className="section-divider" />
