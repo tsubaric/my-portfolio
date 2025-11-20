@@ -45,9 +45,9 @@ function App() {
       ],
     },
     {
-      title: "DevOps Engineer",
-      company: "CloudWorks",
-      period: "2017 — 2019",
+      title: "Data Engineering Intern",
+      company: "2nd Watch (Ollion Consulting)",
+      period: "June 2022 — Aaugust 2022",
       description: [
         "• Developed a full-stack blog application using Java Play Framework, HTML, and Selenium, and led small teams to modernize client websites and data systems.",
         "\n• Built ETL pipelines using AWS, Snowflake, DBT, and PyCharm to improve data quality and streamline workflows fordeployment integration."
@@ -180,32 +180,35 @@ function App() {
         <hr className="section-divider" />
         <section ref={experienceRef} className="section-experience" style={{ minHeight: '80vh', paddingTop: '130px', paddingBottom: 40 }}>
           <h2>Experience</h2>
-          <div className="portfolio-grid">
-            {experiences.map((exp, idx) => (
-              <Card key={idx} className="portfolio-card" sx={{
-                maxWidth: 345,
-                backgroundColor: '#3b4a6b',
-                border: '2px solid #fff',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                borderRadius: '8px',
-                padding: '20px',
-              }}>
-                {exp.image && (
-                  <CardMedia component="img" alt={exp.title} height="140" image={exp.image} />
-                )}
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>
-                    {exp.title}
-                  </Typography>
-                  <Typography variant="subtitle2" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold' }}>
-                    {exp.company} • {exp.period}
-                  </Typography>
-                  <Typography variant="body2" style={{ fontFamily: 'Courier New, monospace', color: '#fff', fontWeight: 'bold', marginTop: 8 }}>
-                    {exp.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            ))}
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 24, alignItems: 'center', width: '100%' }}>
+            <div style={{ width: '100%', maxWidth: 1100, padding: '0 16px' }}>
+              {experiences.map((exp, idx) => {
+                const bullets = Array.isArray(exp.description)
+                  ? exp.description.map(s => String(s).replace(/^[\n\s•]+/, '').trim()).filter(Boolean)
+                  : String(exp.description || '').split(/\r?\n/).map(s => s.replace(/^[\n\s•]+/, '').trim()).filter(Boolean);
+
+                return (
+                  <div key={idx} style={{
+                    backgroundColor: '#3b4a6b',
+                    border: '2px solid #fff',
+                    borderRadius: 8,
+                    padding: '22px',
+                    color: '#fff',
+                    fontFamily: 'Courier New, monospace',
+                    marginBottom: 12,
+                  }}>
+                    <div style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{exp.title}</div>
+                    <div style={{ marginTop: 6, fontWeight: 'bold', opacity: 0.95 }}>{exp.company} • {exp.period}</div>
+                    <div style={{ marginTop: 12, lineHeight: 1.7 }}>
+                      <p style={{ margin: 0 }}>
+                        {bullets.join(' ')}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </section>
         <hr className="section-divider" />
