@@ -47,7 +47,7 @@ function App() {
     {
       title: "Data Engineering Intern",
       company: "2nd Watch (Ollion Consulting)",
-      period: "June 2022 — Aaugust 2022",
+      period: "June 2022 — August 2022",
       description: [
         "• Developed a full-stack blog application using Java Play Framework, HTML, and Selenium, and led small teams to modernize client websites and data systems.",
         "\n• Built ETL pipelines using AWS, Snowflake, DBT, and PyCharm to improve data quality and streamline workflows fordeployment integration."
