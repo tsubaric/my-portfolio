@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import portrait from './images/ArthurMorgan.jpeg';
+import portrait from './images/Tommy23.png';
 import './App.css';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -33,32 +33,25 @@ function App() {
   // Example experience entries
   const experiences = [
     {
-      title: "Senior Automation Engineer",
-      company: "Acme Corp",
-      period: "2022 — Present",
-      description: "Built automation pipelines, improved CI/CD reliability and implemented ML-driven testing.",
-      image: "" // optional
-    },
-    {
-      title: "Software Engineer",
-      company: "Tech Solutions",
-      period: "2019 — 2022",
-      description: "Developed backend services, integrations with SAP, and cloud migrations.",
-      image: ""
+      title: "HydraForce Bosch Rexroth",
+      company: "IT Automation Consultant",
+      period: "January 2024 — Present",
+      description: [
+        "• Built and deployed embedded Power BI dashboards using Microsoft Fabric and Entra roles for secure, real‑time analytics on sales and SAP performance.",
+        "\n• Implemented ADA/WCAG 2.1 accessibility improvements and refactored UX components.",
+        "\n• Developed C#/.NET EDI workflows for SAP integrations (inbound parsing, outbound merges, dropship notifications, ACK matching).",
+        "\n• Secured EDI transfers (SFTP → AS2) and supported NC1 compliance during merger & IT audits.",
+        "\n• Modernized DevOps tracking with Azure DevOps/Power Automate and resolved 200+ ServiceNow tickets to improve uptime."
+      ],
     },
     {
       title: "DevOps Engineer",
       company: "CloudWorks",
       period: "2017 — 2019",
-      description: "Architected CI/CD pipelines and monitored platform reliability.",
-      image: ""
-    },
-    {
-      title: "Consultant",
-      company: "IT Consulting LLC",
-      period: "2015 — 2017",
-      description: "Delivered enterprise solutions and Power Platform integrations.",
-      image: ""
+      description: [
+        "• Developed a full-stack blog application using Java Play Framework, HTML, and Selenium, and led small teams to modernize client websites and data systems.",
+        "\n• Built ETL pipelines using AWS, Snowflake, DBT, and PyCharm to improve data quality and streamline workflows fordeployment integration."
+      ],
     },
   ];
 
@@ -228,12 +221,12 @@ function App() {
                 borderRadius: '8px',
                 padding: '20px',
               }}>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   alt={project.title}
                   height="140"
                   image={project.image}
-                />
+                /> */}
                 <CardContent>
                   <Typography
                     gutterBottom

@@ -2,7 +2,6 @@
   {
     "title": "NFTicket",
     "description": "NFTicket is a platform to browse, create, buy, and sell event tickets as NFTs using blockchain...",
-    "pdf": "NFTicket.pdf",
     "source": "https://github.com/tsubaric",
     "class": [{ "label": "Senior Design" }],
     "skills": [
@@ -17,7 +16,6 @@
   {
     "title": "Doctor & Patient Healthcare Portal",
     "description": "Developed a full-stack application facilitating patient appointments...",
-    "image": "project2.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [{ "label": "Software Engineering" }],
     "skills": [
@@ -29,23 +27,8 @@
     ]
   },
   {
-    "title": "SeekerPro",
-    "description": "Engineered a global GPS tracker using a Raspberry Pi 3 and Neo 6M GPS module...",
-    "image": "project3.jpeg",
-    "source": "https://github.com/tsubaric",
-    "class": [{ "label": "Internet of Things" }],
-    "skills": [
-      { "label": "React Native" },
-      { "label": "Raspberry Pi" },
-      { "label": "Google Cloud API" },
-      { "label": "GPS Module" },
-      { "label": "Node.js" }
-    ]
-  },
-  {
     "title": "X Social Account Recommendations and Similarities",
     "description": "A social graph analysis project that recommends similar Twitter users...",
-    "image": "project5.jpeg",
     "source": "https://github.com/tsubaric",
     "class": [{ "label": "Modern Databases" }],
     "skills": [
@@ -58,28 +41,16 @@
     ]
   },
   {
-    "title": "Theory of Computation",
-    "description": "A brief description of Project 7.",
-    "image": "project7.jpeg",
+    "title": "SeekerPro",
+    "description": "Engineered a global GPS tracker using a Raspberry Pi 3 and Neo 6M GPS module...",
     "source": "https://github.com/tsubaric",
-    "class": [{ "label": "Theory of Computation" }],
+    "class": [{ "label": "Internet of Things" }],
     "skills": [
-      { "label": "Demo" },
-      { "label": "Docs" },
-      { "label": "Video" }
-    ]
-  },
-  {
-    "title": "Amazon Shipping Simulation",
-    "description": "A brief description of Project 9.",
-    "image": "project9.jpeg",
-    "source": "https://github.com/tsubaric",
-    "class": [{ "label": "Software Design" }],
-    "skills": [
-      { "label": "Demo" },
-      { "label": "Docs" },
-      { "label": "Video" }
+      { "label": "React Native" },
+      { "label": "Raspberry Pi" },
+      { "label": "Google Cloud API" },
+      { "label": "GPS Module" },
+      { "label": "Node.js" }
     ]
   }
-  
 ]
