@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import portrait from './images/Tommy23.png';
+import portrait from './images/Tommy18.png';
 import './App.css';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
