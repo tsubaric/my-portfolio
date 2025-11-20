@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import portrait from './images/ArthurMorgan.jpeg';
+import portrait from './images/Tommy23.png';
 import './App.css';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -23,11 +23,37 @@ function App() {
   const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
   const contactRef = useRef(null);
+  const experienceRef = useRef(null);
 
   // Scroll to section helper
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  // Example experience entries
+  const experiences = [
+    {
+      title: "HydraForce Bosch Rexroth",
+      company: "IT Automation Consultant",
+      period: "January 2024 — Present",
+      description: [
+        "• Built and deployed embedded Power BI dashboards using Microsoft Fabric and Entra roles for secure, real‑time analytics on sales and SAP performance.",
+        "\n• Implemented ADA/WCAG 2.1 accessibility improvements and refactored UX components.",
+        "\n• Developed C#/.NET EDI workflows for SAP integrations (inbound parsing, outbound merges, dropship notifications, ACK matching).",
+        "\n• Secured EDI transfers (SFTP → AS2) and supported NC1 compliance during merger & IT audits.",
+        "\n• Modernized DevOps tracking with Azure DevOps/Power Automate and resolved 200+ ServiceNow tickets to improve uptime."
+      ],
+    },
+    {
+      title: "Data Engineering Intern",
+      company: "2nd Watch (Ollion Consulting)",
+      period: "June 2022 — August 2022",
+      description: [
+        "• Developed a full-stack blog application using Java Play Framework, HTML, and Selenium, and led small teams to modernize client websites and data systems.",
+        "\n• Built ETL pipelines using AWS, Snowflake, DBT, and PyCharm to improve data quality and streamline workflows fordeployment integration."
+      ],
+    },
+  ];
 
   return (
     <div className="App">
@@ -50,6 +76,10 @@ function App() {
           <div onClick={() => scrollToSection(aboutRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
             <IconButton aria-label="about me" size="small"><PersonIcon /></IconButton>
             <span>About</span>
+          </div>
+          <div onClick={() => scrollToSection(experienceRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <IconButton aria-label="experience" size="small"><WorkIcon /></IconButton>
+            <span>Experience</span>
           </div>
           <div onClick={() => scrollToSection(portfolioRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
             <IconButton aria-label="portfolio" size="small"><WorkIcon /></IconButton>
@@ -129,7 +159,7 @@ function App() {
             }}>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>About Me</h2>
               <p style={{ fontSize: '1.2rem', lineHeight: '1.8', fontWeight: 'bold' }}>
-               A passionate Software Automation Engineer focused on building scalable, high-performance solutions across diverse platforms. I work fluently with C#, Python, Java, JavaScript, and more, enabling cross-platform development from backend services to front-end interfaces. My experience spans cloud platforms like AWS and Azure, along with frameworks such as .NET and React. I specialize in automation, AI, and machine learning — designing intelligent systems that streamline operations and solve complex real-world challenges. My background includes architecting CI/CD pipelines, integrating with SAP, and leveraging Microsoft Power Platform for enterprise solutions. With a strong grasp of backend architecture, database technologies (SQL, MongoDB, Redis), and frontend development, I bring a full-stack perspective to every project. I’m also experienced in IT consulting, helping organizations enhance performance and adopt modern, efficient systems. At the core, I’m a problem solver with a mindset of continuous improvement — adaptable, analytical, and always looking to drive innovation.
+              A passionate Data Engineer, I enjoy programming with C#, Python, JavaScript, creating backend solutions to front-end interfaces. My experience spans cloud platforms like AWS and Azure, along with frameworks such as .NET and React. I specialize in automation, leveraging AI tools, and machine learning. My background includes architecting CI/CD pipelines, integrating with SAP, and leveraging Microsoft Power Platform for enterprise solutions. I also have a strong grasp of backend architecture, database technologies (SQL, MongoDB, Redis), and frontend development. I’m also experienced in IT consulting, helping organizations enhance performance and adopt modern, efficient systems. At the core, I’m a problem solver with a mindset of continuous improvement — adaptable, analytical, and always looking to drive innovation. I can make you laugh or motivate you! I will have your back !
               </p>
             </div>
             <div style={{
@@ -148,6 +178,40 @@ function App() {
           </div>
         </section>
         <hr className="section-divider" />
+        <section ref={experienceRef} className="section-experience" style={{ minHeight: '80vh', paddingTop: '130px', paddingBottom: 40 }}>
+          <h2>Experience</h2>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 24, alignItems: 'center', width: '100%' }}>
+            <div style={{ width: '100%', maxWidth: 1100, padding: '0 16px' }}>
+              {experiences.map((exp, idx) => {
+                const bullets = Array.isArray(exp.description)
+                  ? exp.description.map(s => String(s).replace(/^[\n\s•]+/, '').trim()).filter(Boolean)
+                  : String(exp.description || '').split(/\r?\n/).map(s => s.replace(/^[\n\s•]+/, '').trim()).filter(Boolean);
+
+                return (
+                  <div key={idx} style={{
+                    backgroundColor: '#3b4a6b',
+                    border: '2px solid #fff',
+                    borderRadius: 8,
+                    padding: '22px',
+                    color: '#fff',
+                    fontFamily: 'Courier New, monospace',
+                    marginBottom: 12,
+                  }}>
+                    <div style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{exp.title}</div>
+                    <div style={{ marginTop: 6, fontWeight: 'bold', opacity: 0.95 }}>{exp.company} • {exp.period}</div>
+                    <div style={{ marginTop: 12, lineHeight: 1.7 }}>
+                      <p style={{ margin: 0 }}>
+                        {bullets.join(' ')}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        <hr className="section-divider" />
         <section ref={portfolioRef} className="section-portfolio" style={{ minHeight: '80vh', paddingTop: '130px', paddingBottom: 40 }}>
           <h2>Portfolio</h2>
           <div className="portfolio-grid">
@@ -160,12 +224,12 @@ function App() {
                 borderRadius: '8px',
                 padding: '20px',
               }}>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   alt={project.title}
                   height="140"
                   image={project.image}
-                />
+                /> */}
                 <CardContent>
                   <Typography
                     gutterBottom
