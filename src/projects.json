@@ -29,7 +29,7 @@
   {
     "title": "X Social Account Recommendations and Similarities",
     "description": "A social graph analysis project that recommends similar Twitter users...",
-    "source": "https://github.com/tsubaric",
+    "source": "https://github.com/cgoeke00/mdbproject",
     "class": [{ "label": "Modern Databases" }],
     "skills": [
       { "label": "Python" },
