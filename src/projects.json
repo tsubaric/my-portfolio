@@ -2,7 +2,7 @@
   {
     "title": "NFTicket",
     "description": "NFTicket is a platform to browse, create, buy, and sell event tickets as NFTs using blockchain...",
-    "source": "https://github.com/tsubaric",
+    "source": "https://github.com/trbutler4/NFTicket",
     "class": [{ "label": "Senior Design" }],
     "skills": [
       { "label": "Node.js" },
@@ -16,7 +16,7 @@
   {
     "title": "Doctor & Patient Healthcare Portal",
     "description": "Developed a full-stack application facilitating patient appointments...",
-    "source": "https://github.com/tsubaric",
+    "source": "https://github.com/tjsubaric/fse_project",
     "class": [{ "label": "Software Engineering" }],
     "skills": [
       { "label": "Java" },
@@ -43,7 +43,7 @@
   {
     "title": "SeekerPro",
     "description": "Engineered a global GPS tracker using a Raspberry Pi 3 and Neo 6M GPS module...",
-    "source": "https://github.com/tsubaric",
+    "source": "https://github.com/tjsubaric/SeekerPro",
     "class": [{ "label": "Internet of Things" }],
     "skills": [
       { "label": "React Native" },

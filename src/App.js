@@ -382,7 +382,7 @@ function App() {
           }}>
             <div className="footer-column">
               <h4 className="text-lg font-semibold mb-4" style={{ fontWeight: 'bold' }}>Tommy Subaric</h4>
-              <p className="text-sm" style={{ fontWeight: 'bold' }}>Software Automation Engineer</p>
+              <p className="text-sm" style={{ fontWeight: 'bold' }}>Software AI Engineer</p>
             </div>
             <div className="footer-column">
               <h5 className="font-medium mb-2" style={{ fontWeight: 'bold' }}>Portfolio</h5>
