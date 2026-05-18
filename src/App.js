@@ -423,3 +423,5 @@ function App() {
 }
 
 export default App;
+
+// Looking Good ! Tweak Navigation Bar, and Format Card Media, and then update Resume and Experience sections!
