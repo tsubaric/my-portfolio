@@ -346,3 +346,407 @@ footer ul li a:hover {
   background: #e0f7f1;
   border-color: #22bfa2;
 }
+
+/* =====================================================
+   RESPONSIVE DESIGN - MOBILE & TABLET
+   ===================================================== */
+
+/* TABLET - 768px to 1024px */
+@media (max-width: 1024px) {
+  .top-bar {
+    min-width: auto;
+    width: 90%;
+    padding: 0 16px;
+    margin-top: 12px;
+    height: 56px;
+  }
+
+  .top-bar > div {
+    gap: 1rem;
+  }
+
+  .top-bar span {
+    font-size: 0.95rem;
+  }
+
+  .home-intro .home-title {
+    font-size: 2.5rem;
+  }
+
+  .home-intro .home-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about-profile-pic {
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+  }
+
+  .portfolio-card {
+    width: 280px;
+    min-height: 380px;
+  }
+
+  .portfolio-grid {
+    gap: 20px;
+  }
+
+  .section-divider {
+    margin: 32px 0;
+  }
+}
+
+/* MOBILE - Under 768px */
+@media (max-width: 768px) {
+  /* Main app container */
+  .App {
+    overflow-x: hidden;
+  }
+
+  /* NAVIGATION BAR */
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-width: auto;
+    transform: none;
+    left: auto;
+    border-radius: 0;
+    height: auto;
+    padding: 12px 8px;
+    margin-top: 0;
+    gap: 0.5rem;
+  }
+
+  .top-bar > div {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .top-bar span {
+    display: none; /* Hide text labels on mobile */
+  }
+
+  .top-bar .MuiIconButton-root {
+    padding: 8px !important;
+    font-size: 20px;
+  }
+
+  /* Add extra padding-top to all sections to account for fixed nav */
+  .App > div {
+    padding-top: 60px;
+  }
+
+  /* HOME SECTION */
+  .section-home {
+    min-height: auto !important;
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .home-intro {
+    max-width: 95%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-intro .home-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .home-intro .home-subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .blinking-cursor {
+    font-size: 2rem !important;
+    width: 12px;
+    margin-left: 2px;
+  }
+
+  .home-intro .home-icons {
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .home-intro .home-icons a {
+    font-size: 0.8rem;
+  }
+
+  /* ABOUT SECTION */
+  .section-about {
+    min-height: auto !important;
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .section-about > div {
+    display: flex !important;
+    flex-direction: column !important;
+    max-width: 95% !important;
+    gap: 20px !important;
+  }
+
+  .text-section {
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+    padding-top: 20px !important;
+  }
+
+  .text-section h2 {
+    font-size: 1.75rem;
+    margin-top: 0;
+  }
+
+  .text-section p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .about-profile-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 0;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
+    border: 4px solid #fff;
+    background: #e0f7f1;
+    order: -1; /* Show image above text */
+  }
+
+  /* EXPERIENCE SECTION */
+  .section-experience {
+    min-height: auto !important;
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .section-experience h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+
+  .section-experience > div {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .section-experience > div > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .section-experience > div > div > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 16px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .section-experience > div > div > div div:first-child {
+    font-size: 1.1rem !important;
+  }
+
+  .section-experience > div > div > div div:nth-child(2) {
+    font-size: 0.85rem !important;
+    margin-top: 4px !important;
+  }
+
+  .section-experience > div > div > div div:nth-child(3) {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    margin-top: 8px !important;
+  }
+
+  /* PORTFOLIO SECTION */
+  .section-portfolio {
+    min-height: auto !important;
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .section-portfolio h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .portfolio-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .portfolio-card .MuiCardContent-root {
+    padding: 12px 0 16px 0 !important;
+  }
+
+  .source-btn {
+    width: auto;
+    height: auto;
+    padding: 6px 12px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+  }
+
+  /* SECTION DIVIDER */
+  .section-divider {
+    margin: 24px 0;
+  }
+
+  /* FOOTER/CONTACT SECTION */
+  footer {
+    padding: 24px 16px;
+  }
+
+  footer > div {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: flex-start !important;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-column h4,
+  .footer-column h5 {
+    font-size: 1rem;
+  }
+
+  .footer-column p {
+    font-size: 0.9rem;
+  }
+
+  .footer-column ul li {
+    font-size: 0.9rem;
+  }
+
+  /* GENERAL TEXT SCALING */
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+
+  p {
+    font-size: 0.95rem !important;
+  }
+
+  /* Icon buttons */
+  .MuiIconButton-root {
+    font-size: 18px !important;
+  }
+
+  /* Overall padding */
+  .App > div {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* SMALL MOBILE - Under 480px */
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 8px 4px;
+    height: auto;
+  }
+
+  .top-bar > div {
+    gap: 0.3rem;
+  }
+
+  .top-bar .MuiIconButton-root {
+    padding: 6px !important;
+  }
+
+  .section-home {
+    padding-top: 60px !important;
+  }
+
+  .home-intro .home-title {
+    font-size: 1.5rem;
+  }
+
+  .home-intro .home-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .home-intro .home-icons {
+    gap: 0.8rem;
+  }
+
+  .home-intro .home-icons a {
+    font-size: 0.7rem;
+  }
+
+  .blinking-cursor {
+    font-size: 1.5rem !important;
+    width: 10px;
+    margin-left: 1px;
+  }
+
+  .about-profile-pic {
+    width: 160px;
+    height: 160px;
+  }
+
+  .text-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-section p {
+    font-size: 0.9rem !important;
+  }
+
+  .section-portfolio h2,
+  .section-experience h2 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-card {
+    padding: 12px;
+  }
+
+  .section-experience > div > div > div {
+    padding: 12px !important;
+  }
+
+  /* Skill badges - make them more compact */
+  .portfolio-card .MuiCardActions-root {
+    flex-direction: column;
+    gap: 8px !important;
+  }
+
+  /* Overall padding */
+  .App > div {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
