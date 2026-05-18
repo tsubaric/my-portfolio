@@ -290,7 +290,10 @@ footer ul li a:hover {
   justify-content: center;
   gap: 32px;           /* More space between cards */
   width: 100%;
+  max-width: 980px;
   margin: 0 auto;
+  padding: 0 12px;
+  box-sizing: border-box;
   align-items: stretch; /* Make all cards the same height */
 }
 
@@ -302,12 +305,14 @@ footer ul li a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 20px; /* Add padding inside the card */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 320px;        /* Fixed width for all cards */
+  width: 100%;
+  max-width: 320px;    /* Fixed width for all cards */
   min-height: 420px;   /* Fixed height for all cards */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+  margin: 0 auto;
 }
 
 .portfolio-card:hover {
@@ -345,6 +350,25 @@ footer ul li a:hover {
 .source-btn:hover {
   background: #e0f7f1;
   border-color: #22bfa2;
+}
+
+/* Keep experience cards centered when constrained/narrow */
+.section-experience > div {
+  align-items: center !important;
+}
+
+.section-experience > div > div {
+  width: 100%;
+  max-width: 980px;
+  padding: 0 12px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.section-experience > div > div > div {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 /* =====================================================
@@ -539,12 +563,14 @@ footer ul li a:hover {
   .section-experience > div {
     flex-direction: column !important;
     gap: 16px !important;
+    align-items: center !important;
   }
 
   .section-experience > div > div {
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 680px !important;
     padding: 0 !important;
+    margin: 0 auto !important;
   }
 
   .section-experience > div > div > div {
@@ -587,6 +613,7 @@ footer ul li a:hover {
     align-items: center;
     gap: 16px;
     padding: 0 16px;
+    max-width: 680px;
   }
 
   .portfolio-card {
