@@ -421,6 +421,9 @@ footer ul li a:hover {
 }
 
 .section-experience > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   width: 100%;
   max-width: 980px;
   padding: 0 12px;
@@ -632,15 +635,18 @@ footer ul li a:hover {
   .section-experience > div > div {
     width: 100% !important;
     max-width: 680px !important;
-    padding: 0 !important;
+    padding: 0 12px !important;
     margin: 0 auto !important;
+    box-sizing: border-box !important;
   }
 
   .section-experience > div > div > div {
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 420px !important;
     padding: 16px !important;
     font-size: 0.9rem !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
   }
 
   .section-experience > div > div > div div:first-child {
@@ -675,15 +681,20 @@ footer ul li a:hover {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding: 0 16px;
+    width: 100%;
     max-width: 680px;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
   }
 
   .portfolio-card {
     width: 100%;
-    max-width: 100%;
+    max-width: 420px;
     min-height: auto;
     padding: 16px;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
   .portfolio-card .MuiCardContent-root {
@@ -822,10 +833,12 @@ footer ul li a:hover {
 
   .portfolio-card {
     padding: 12px;
+    max-width: 100%;
   }
 
   .section-experience > div > div > div {
     padding: 12px !important;
+    max-width: 100% !important;
   }
 
   /* Skill badges - make them more compact */
