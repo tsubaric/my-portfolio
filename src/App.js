@@ -178,7 +178,7 @@ function App() {
           </div>
         </section>
         <hr className="section-divider" />
-        <section ref={experienceRef} className="section-experience" style={{ minHeight: '80vh', paddingTop: '80px', paddingBottom: 40 }}>
+        <section ref={experienceRef} className="section-experience" style={{ minHeight: '80vh', paddingTop: '90px', paddingBottom: 40 }}>
           <h2>Experience</h2>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 24, alignItems: 'center', width: '100%' }}>
@@ -212,7 +212,7 @@ function App() {
           </div>
         </section>
         <hr className="section-divider" />
-        <section ref={portfolioRef} className="section-portfolio" style={{ minHeight: '80vh', paddingTop: '80px', paddingBottom: 40 }}>
+        <section ref={portfolioRef} className="section-portfolio" style={{ minHeight: '80vh', paddingTop: '90px', paddingBottom: 40 }}>
           <h2>Portfolio</h2>
           <div className="portfolio-grid">
             {projects.map((project, index) => (
