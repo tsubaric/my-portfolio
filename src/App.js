@@ -6,6 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
+import HandymanIcon from '@mui/icons-material/Handyman';
 import HomeIcon from '@mui/icons-material/Home';
 import EmailIcon from '@mui/icons-material/Email';
 import DescriptionIcon from '@mui/icons-material/Description';
@@ -81,7 +82,7 @@ function App() {
             <span>Experience</span>
           </div>
           <div onClick={() => scrollToSection(portfolioRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
-            <IconButton aria-label="portfolio" size="small"><WorkIcon /></IconButton>
+            <IconButton aria-label="portfolio" size="small"><HandymanIcon /></IconButton>
             <span>Portfolio</span>
           </div>
           <div onClick={() => scrollToSection(contactRef)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
@@ -177,7 +178,7 @@ function App() {
           </div>
         </section>
         <hr className="section-divider" />
-        <section ref={experienceRef} className="section-experience" style={{ minHeight: '80vh', paddingTop: '130px', paddingBottom: 40 }}>
+        <section ref={experienceRef} className="section-experience" style={{ minHeight: '80vh', paddingTop: '80px', paddingBottom: 40 }}>
           <h2>Experience</h2>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 24, alignItems: 'center', width: '100%' }}>
@@ -211,7 +212,7 @@ function App() {
           </div>
         </section>
         <hr className="section-divider" />
-        <section ref={portfolioRef} className="section-portfolio" style={{ minHeight: '80vh', paddingTop: '130px', paddingBottom: 40 }}>
+        <section ref={portfolioRef} className="section-portfolio" style={{ minHeight: '80vh', paddingTop: '80px', paddingBottom: 40 }}>
           <h2>Portfolio</h2>
           <div className="portfolio-grid">
             {projects.map((project, index) => (
