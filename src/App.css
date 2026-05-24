@@ -1,66 +1,3 @@
-/* iPhone 14 Pro/Max, Galaxy S22 Ultra, etc. */
-@media (max-width: 430px) {
-  .top-bar {
-    padding: 6px 0;
-    height: auto;
-    width: 100vw;
-    left: 0;
-    transform: none;
-    min-width: 0;
-    border-radius: 0;
-    margin-top: 0;
-    gap: 0.2rem;
-  }
-  .top-bar > div {
-    justify-content: center !important;
-    gap: 0.2rem;
-    width: 100%;
-  }
-  .top-bar .MuiIconButton-root {
-    padding: 4px !important;
-    font-size: 20px !important;
-  }
-}
-
-/* iPhone 12 Mini, SE, etc. */
-@media (max-width: 390px) {
-  .top-bar {
-    padding: 4px 0;
-    height: auto;
-    width: 100vw;
-    left: 0;
-    transform: none;
-    min-width: 0;
-    border-radius: 0;
-    margin-top: 0;
-    gap: 0.1rem;
-  }
-  .top-bar > div {
-    justify-content: center !important;
-    gap: 0.1rem;
-    width: 100%;
-  }
-  .top-bar .MuiIconButton-root {
-    padding: 3px !important;
-    font-size: 18px !important;
-  }
-}
-/* Center nav icons for very small devices */
-@media (max-width: 500px) {
-  .top-bar > div {
-    justify-content: center !important;
-    width: 100%;
-  }
-  .top-bar {
-    justify-content: center !important;
-    width: 100vw;
-    left: 0;
-    transform: none;
-    min-width: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
 /* Global Font Styling */
 body, h1, h2, h3, h4, h5, h6, p, a, span, div, button, input, textarea {
   font-family: 'Courier New', Courier, monospace; /* Apply Courier New globally */
@@ -78,24 +15,6 @@ body {
 .App {
   text-align: center;
   min-height: 100vh;
-}
-
-.App-logo {
-  width: 400px; /* Adjust size as needed */
-  padding: 20px;
-}
-
-.App-header {
-  background-color: transparent;
-  min-height: unset;
-  display: none;
-  padding: 0;
-  color: inherit;
-  margin-left: 0;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .top-bar {
@@ -138,10 +57,11 @@ body {
 
 .top-bar span {
   color: #fff !important;
-  font-weight: bold !important;
+  font-weight: 500;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
   transition: color 0.2s, text-decoration 0.2s, transform 0.2s;
+  margin-right: 8px;
 }
 
 /* Change icon and text color on hover */
@@ -153,45 +73,9 @@ body {
   transform: translateY(-2px) scale(1.08);
 }
 
-.top-bar span {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #fff !important; /* Ensure nav text is white */
-  margin-right: 8px;
-}
-
 .text-section {
   max-width: 50%;
   text-align: left;
-}
-
-.header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content vertically */
-}
-
-.button-group {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.center-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.holder {
-  display: flex;
-  align-items: center;
-  margin-top: 10px; /* Add margin between each holder */
-}
-
-.holder > span {
-  margin-left: 10px; /* Add space between icon and text */
 }
 
 .blinking-cursor {
@@ -272,9 +156,7 @@ body,
 .section-home,
 .section-about,
 .section-portfolio,
-.section-resume,
 .section-contact,
-.footer-contact,
 h1, h2, h3, h4, h5, h6,
 p, a, span, div, button, input, textarea {
   color: #fff;
@@ -309,12 +191,6 @@ footer {
   background-color: #2e3a59;
   color: #fff;
   padding: 32px 20px;
-}
-
-footer .grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
-  gap: 20px;
 }
 
 footer h4, footer h5 {
@@ -503,7 +379,6 @@ footer ul li a:hover {
     width: 100%;
     min-width: auto;
     transform: none;
-    left: auto;
     border-radius: 0;
     height: auto;
     padding: 12px 8px;
@@ -851,5 +726,41 @@ footer ul li a:hover {
   .App > div {
     padding-left: 8px;
     padding-right: 8px;
+  }
+}
+
+/* TASK BAR CENTERING - PHONE WIDTHS */
+@media (max-width: 430px) {
+  .top-bar {
+    width: calc(100% - 12px) !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    margin-top: 0 !important;
+    padding: 6px 8px !important;
+    border-radius: 14px !important;
+    box-sizing: border-box;
+  }
+
+  .top-bar > div {
+    width: 100%;
+    justify-content: center !important;
+    gap: 0.3rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .top-bar {
+    width: calc(100% - 10px) !important;
+    padding: 4px 6px !important;
+    border-radius: 12px !important;
+  }
+
+  .top-bar > div {
+    gap: 0.2rem !important;
+  }
+
+  .top-bar .MuiIconButton-root {
+    padding: 4px !important;
   }
 }
